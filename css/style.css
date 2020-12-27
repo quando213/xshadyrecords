@@ -128,54 +128,50 @@ h2.title {
     color: white;
 }
 
-.carousel .col-6 {
-    display: inline-block;
-}
-
 /* Multiple Item Carousel */
 @media (max-width: 767px) {
-    .carousel-inner .carousel-item-right.active,
-    .carousel-inner .carousel-item-next {
+    .carousel-multiple .carousel-inner .carousel-item-right.active,
+    .carousel-multiple .carousel-inner .carousel-item-next {
         transform: translateX(50%);
     }
-    .carousel-inner .carousel-item-left.active,
-    .carousel-inner .carousel-item-prev {
+    .carousel-multiple .carousel-inner .carousel-item-left.active,
+    .carousel-multiple .carousel-inner .carousel-item-prev {
         transform: translateX(-50%);
     }
 }
 
 /* large - display 3 */
 @media (min-width: 768px) {
-    .carousel-inner .carousel-item-right.active,
-    .carousel-inner .carousel-item-next {
+    .carousel-multiple .carousel-inner .carousel-item-right.active,
+    .carousel-multiple .carousel-inner .carousel-item-next {
         transform: translateX(33%);
     }
-    .carousel-inner .carousel-item-left.active,
-    .carousel-inner .carousel-item-prev {
+    .carousel-multiple .carousel-inner .carousel-item-left.active,
+    .carousel-multiple .carousel-inner .carousel-item-prev {
         transform: translateX(-33%);
     }
 }
 
 /* large - display 3 */
 @media (min-width: 992px) {
-    .carousel-inner .carousel-item-right.active,
-    .carousel-inner .carousel-item-next {
+    .carousel-multiple .carousel-inner .carousel-item-right.active,
+    .carousel-multiple .carousel-inner .carousel-item-next {
         transform: translateX(25%);
     }
-    .carousel-inner .carousel-item-left.active,
-    .carousel-inner .carousel-item-prev {
+    .carousel-multiple .carousel-inner .carousel-item-left.active,
+    .carousel-multiple .carousel-inner .carousel-item-prev {
         transform: translateX(-25%);
     }
 }
 
-.carousel-inner .carousel-item.active,
-.carousel-inner .carousel-item-next,
-.carousel-inner .carousel-item-prev {
+.carousel-multiple .carousel-inner .carousel-item.active,
+.carousel-multiple .carousel-inner .carousel-item-next,
+.carousel-multiple .carousel-inner .carousel-item-prev {
     display: flex;
 }
 
-.carousel-inner .carousel-item-right,
-.carousel-inner .carousel-item-left {
+.carousel-multiple .carousel-inner .carousel-item-right,
+.carousel-multiple .carousel-inner .carousel-item-left {
     transform: translateX(0);
 }
 

@@ -8,11 +8,11 @@ $('.cart-close').click(function () {
 })
 
 // Product list carousel
-$('#carousel-new-releases').carousel({
+$('.carousel-multiple').carousel({
     interval: 0
 })
 
-$('#carousel-new-releases .carousel-item').each(function() {
+$('.carousel-multiple .carousel-item').each(function() {
     var minPerSlide = 4;
     var next = $(this).next();
     if (!next.length) {
