@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <meta property="og:image" content="http://gatgat.herokuapp.com/img/apple-music-image.png">-->
+    <meta name="description"
+          content="Build your dream music collection with our wide selection of albums including new releases, bestsellers, and retro classics.">
+    <title>Xshady Records</title>
+    <!--    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">-->
+    <!--    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">-->
+    <script src="https://kit.fontawesome.com/2a33a147b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--    <link rel="stylesheet" href="css/bootstrap-dark.min.css">-->
+    <!--    <link rel="stylesheet" href="css/toggle-bootstrap.css">-->
+    <!--    <link rel="stylesheet" href="css/toggle-bootstrap-dark.css">-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="container mx-auto">
+    <div class="header border-bottom">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="user-container">
+                <div class="sign-in-text font-italic"><i class="fas fa-cog mr-2"></i>Sign In</div>
+            </div>
+            <div class="logo-container my-2">
+                <img src="images/brand-logo.png" alt="Xshady Records">
+            </div>
+            <div class="cart-container">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-quantity">2</span>
+            </div>
+        </div>
+    </div>
+    <div class="navbar p-0">
+        <div class="logo d-flex justify-content-between align-items-center">
+            <i class="fas fa-home mr-2 bg-danger px-3 py-2 text-light d-none d-md-block"></i>
+            <nav class="d-flex p-3 text-dark">
+                <a class="mr-4" href="">Home</a>
+                <a class="mr-4" href="">Products</a>
+                <a class="mr-4" href="">About</a>
+                <a class="" href="">Contact</a>
+            </nav>
+        </div>
+        <div class="form-group d-flex align-items-center m-0">
+            <label for="search" class="mb-0"><i class="fas fa-search mr-2"></i></label>
+            <input type="text" class="form-control" id="search" placeholder="Search">
+        </div>
+    </div>
+</header>
+<div class="container mb-4">
+    <div id="carousel-home" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/slide_logo_1.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="images/slide_logo_2.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="images/slide_logo_3.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="images/slide_logo_4.jpg">
+            </div>
+            <div class="carousel-item">
+                <img src="images/slide_logo_5.jpg">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carousel-home" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-home" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+</div>
+<div class="container" id="list-new-releases">
+    <div class="title-container d-flex justify-content-between">
+        <h2 class="title">
+            New Releases
+        </h2>
+        <div class="product-list-control d-inline-block">
+            <a class="" href="#carousel-new-releases" data-slide="prev">
+                <i class="fas fa-chevron-left pr-3 border-right"></i>
+            </a>
+            <a class="" href="#carousel-new-releases" data-slide="next">
+                <i class="fas fa-chevron-right pl-3"></i>
+            </a>
+        </div>
+    </div>
+    <div class="container-fluid p-0">
+        <div id="carousel-new-releases" class="carousel slide" data-ride="carousel">
+            <div class="container carousel-inner w-100 p-0" role="listbox">
+                <div class="carousel-item active">
+                    <div class="card border-0 col-6 col-md-4 col-lg-3">
+                        <div class="card-image position-relative">
+                            <img class="card-img-top" src="images/product-image-1.webp" alt="Card image"
+                                 style="width:100%">
+                            <div class="card-fav-container text-center">
+                                <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                            </div>
+                            <div class="sticker">
+                                <!--                        <img class="sticker-sale" src="images/sticker-sale.webp">-->
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text mb-1">Love Goes - Sam Smith</p>
+                            <div class="card-price-container">
+                                <del class="price-original text-secondary">250,000₫</del>
+                                <span class="price-sale">100,000₫</span>
+                            </div>
+                            <div class="card-cart">
+                                <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card border-0 col-6 col-md-4 col-lg-3">
+                        <div class="card-image position-relative">
+                            <img class="card-img-top" src="images/product-image-2.jpg" alt="Card image"
+                                 style="width:100%">
+                            <div class="card-fav-container text-center">
+                                <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                            </div>
+                            <div class="sticker">
+                                <!--                        <img class="sticker-sale" src="images/sticker-sale.webp">-->
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text mb-1">Positions - Ariana Grande</p>
+                            <div class="card-price-container">
+                                <del class="price-original text-secondary">250,000₫</del>
+                                <span class="price-sale">100,000₫</span>
+                            </div>
+                            <div class="card-cart">
+                                <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card border-0 col-6 col-md-4 col-lg-3">
+                        <div class="card-image position-relative">
+                            <img class="card-img-top" src="images/product-image-3.jpg" alt="Card image"
+                                 style="width:100%">
+                            <div class="card-fav-container text-center">
+                                <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                            </div>
+                            <div class="sticker">
+                                <!--                        <img class="sticker-sale" src="images/sticker-sale.webp">-->
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text mb-1">Is There Anybody Out There? - A Great Big World</p>
+                            <div class="card-price-container">
+                                <del class="price-original text-secondary">250,000₫</del>
+                                <span class="price-sale">100,000₫</span>
+                            </div>
+                            <div class="card-cart">
+                                <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card border-0 col-6 col-md-4 col-lg-3">
+                        <div class="card-image position-relative">
+                            <img class="card-img-top" src="images/product-image-4.png" alt="Card image"
+                                 style="width:100%">
+                            <div class="card-fav-container text-center">
+                                <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                            </div>
+                            <div class="sticker">
+                                <!--                        <img class="sticker-sale" src="images/sticker-sale.webp">-->
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text mb-1">21 - Adele</p>
+                            <div class="card-price-container">
+                                <del class="price-original text-secondary">250,000₫</del>
+                                <span class="price-sale">100,000₫</span>
+                            </div>
+                            <div class="card-cart">
+                                <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card border-0 col-6 col-md-4 col-lg-3">
+                        <div class="card-image position-relative">
+                            <img class="card-img-top" src="images/product-image-5.jpg" alt="Card image"
+                                 style="width:100%">
+                            <div class="card-fav-container text-center">
+                                <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                            </div>
+                            <div class="sticker">
+                                <!--                        <img class="sticker-sale" src="images/sticker-sale.webp">-->
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text mb-1">Confidencias - Alejandro Fernandez</p>
+                            <div class="card-price-container">
+                                <del class="price-original text-secondary">250,000₫</del>
+                                <span class="price-sale">100,000₫</span>
+                            </div>
+                            <div class="card-cart">
+                                <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card border-0 col-6 col-md-4 col-lg-3">
+                        <div class="card-image position-relative">
+                            <img class="card-img-top" src="images/product-image-2.jpg" alt="Card image"
+                                 style="width:100%">
+                            <div class="card-fav-container text-center">
+                                <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                            </div>
+                            <div class="sticker">
+                                <!--                        <img class="sticker-sale" src="images/sticker-sale.webp">-->
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text mb-1">Positions - Ariana Grande</p>
+                            <div class="card-price-container">
+                                <del class="price-original text-secondary">250,000₫</del>
+                                <span class="price-sale">100,000₫</span>
+                            </div>
+                            <div class="card-cart">
+                                <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card border-0 col-6 col-md-4 col-lg-3">
+                        <div class="card-image position-relative">
+                            <img class="card-img-top" src="images/product-image-3.jpg" alt="Card image"
+                                 style="width:100%">
+                            <div class="card-fav-container text-center">
+                                <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                            </div>
+                            <div class="sticker">
+                                <!--                        <img class="sticker-sale" src="images/sticker-sale.webp">-->
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text mb-1">Is There Anybody Out There? - A Great Big World</p>
+                            <div class="card-price-container">
+                                <del class="price-original text-secondary">250,000₫</del>
+                                <span class="price-sale">100,000₫</span>
+                            </div>
+                            <div class="card-cart">
+                                <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card border-0 col-6 col-md-4 col-lg-3">
+                        <div class="card-image position-relative">
+                            <img class="card-img-top" src="images/product-image-4.png" alt="Card image"
+                                 style="width:100%">
+                            <div class="card-fav-container text-center">
+                                <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                            </div>
+                            <div class="sticker">
+                                <!--                        <img class="sticker-sale" src="images/sticker-sale.webp">-->
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text mb-1">21 - Adele</p>
+                            <div class="card-price-container">
+                                <del class="price-original text-secondary">250,000₫</del>
+                                <span class="price-sale">100,000₫</span>
+                            </div>
+                            <div class="card-cart">
+                                <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="card border-0 col-6 col-md-4 col-lg-3">
+                        <div class="card-image position-relative">
+                            <img class="card-img-top" src="images/product-image-5.jpg" alt="Card image"
+                                 style="width:100%">
+                            <div class="card-fav-container text-center">
+                                <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                            </div>
+                            <div class="sticker">
+                                <!--                        <img class="sticker-sale" src="images/sticker-sale.webp">-->
+                            </div>
+                        </div>
+                        <div class="card-body text-center">
+                            <p class="card-text mb-1">Confidencias - Alejandro Fernandez</p>
+                            <div class="card-price-container">
+                                <del class="price-original text-secondary">250,000₫</del>
+                                <span class="price-sale">100,000₫</span>
+                            </div>
+                            <div class="card-cart">
+                                <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" id="list-pre-order">
+    <div class="title-container d-flex justify-content-between">
+        <h2 class="title">
+            Pre-Order
+        </h2>
+        <div class="product-list-control d-inline-block">
+            <i class="fas fa-chevron-left pr-3 border-right"></i>
+            <i class="fas fa-chevron-right pl-3"></i>
+        </div>
+    </div>
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="card border-0 col-6 col-md-4 col-lg-3">
+                <div class="card-image position-relative">
+                    <img class="card-img-top" src="images/product-image-1.webp" alt="Card image" style="width:100%">
+                    <div class="card-fav-container text-center">
+                        <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="sticker">
+                        <img class="sticker-sale" src="images/sticker-sale.webp">
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <p class="card-text mb-1">Love Goes - Sam Smith</p>
+                    <div class="card-price-container">
+                        <del class="price-original text-secondary">250,000₫</del>
+                        <span class="price-sale">100,000₫</span>
+                    </div>
+                    <div class="card-cart">
+                        <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0 col-6 col-md-4 col-lg-3">
+                <div class="card-image position-relative">
+                    <img class="card-img-top" src="images/product-image-1.webp" alt="Card image" style="width:100%">
+                    <div class="card-fav-container text-center">
+                        <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="sticker">
+                        <img class="sticker-sale" src="images/sticker-sale.webp">
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <p class="card-text mb-1">Love Goes - Sam Smith</p>
+                    <div class="card-price-container">
+                        <del class="price-original text-secondary">250,000₫</del>
+                        <span class="price-sale">100,000₫</span>
+                    </div>
+                    <div class="card-cart">
+                        <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0 col-6 col-md-4 col-lg-3">
+                <div class="card-image position-relative">
+                    <img class="card-img-top" src="images/product-image-1.webp" alt="Card image" style="width:100%">
+                    <div class="card-fav-container text-center">
+                        <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="sticker">
+                        <img class="sticker-sale" src="images/sticker-sale.webp">
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <p class="card-text mb-1">Love Goes - Sam Smith</p>
+                    <div class="card-price-container">
+                        <del class="price-original text-secondary">250,000₫</del>
+                        <span class="price-sale">100,000₫</span>
+                    </div>
+                    <div class="card-cart">
+                        <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0 col-6 col-md-4 col-lg-3">
+                <div class="card-image position-relative">
+                    <img class="card-img-top" src="images/product-image-1.webp" alt="Card image" style="width:100%">
+                    <div class="card-fav-container text-center">
+                        <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="sticker">
+                        <img class="sticker-sale" src="images/sticker-sale.webp">
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <p class="card-text mb-1">Love Goes - Sam Smith</p>
+                    <div class="card-price-container">
+                        <del class="price-original text-secondary">250,000₫</del>
+                        <span class="price-sale">100,000₫</span>
+                    </div>
+                    <div class="card-cart">
+                        <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container mb-5" id="featured-categories">
+    <div class="row">
+        <div class="col-12 col-md-4">
+            <div class="img-container">
+                <img class="img-fluid" src="images/banner_3_image_1v2.webp">
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="img-container">
+                <img class="img-fluid" src="images/banner_3_image_2v2.png">
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="img-container">
+                <img class="img-fluid" src="images/banner_3_image_3.png">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" id="list-best-sellers">
+    <div class="title-container d-flex justify-content-between">
+        <h2 class="title">
+            Best Sellers
+        </h2>
+        <div class="product-list-control d-inline-block">
+            <i class="fas fa-chevron-left pr-3 border-right"></i>
+            <i class="fas fa-chevron-right pl-3"></i>
+        </div>
+    </div>
+    <div class="container-fluid p-0">
+        <div class="row">
+            <div class="card border-0 col-6 col-md-4 col-lg-3">
+                <div class="card-image position-relative">
+                    <img class="card-img-top" src="images/product-image-2.jpg" alt="Card image" style="width:100%">
+                    <div class="card-fav-container text-center">
+                        <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="sticker">
+                        <!--                        <img class="sticker-sale" src="images/sticker-sale.webp">-->
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <p class="card-text mb-1">Love Goes - Sam Smith</p>
+                    <div class="card-price-container">
+                        <del class="price-original text-secondary">250,000₫</del>
+                        <span class="price-sale">100,000₫</span>
+                    </div>
+                    <div class="card-cart">
+                        <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0 col-6 col-md-4 col-lg-3">
+                <div class="card-image position-relative">
+                    <img class="card-img-top" src="images/product-image-2.jpg" alt="Card image" style="width:100%">
+                    <div class="card-fav-container text-center">
+                        <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="sticker">
+                        <!--                        <img class="sticker-sale" src="images/sticker-sale.webp">-->
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <p class="card-text mb-1">Love Goes - Sam Smith</p>
+                    <div class="card-price-container">
+                        <del class="price-original text-secondary">250,000₫</del>
+                        <span class="price-sale">100,000₫</span>
+                    </div>
+                    <div class="card-cart">
+                        <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0 col-6 col-md-4 col-lg-3">
+                <div class="card-image position-relative">
+                    <img class="card-img-top" src="images/product-image-2.jpg" alt="Card image" style="width:100%">
+                    <div class="card-fav-container text-center">
+                        <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="sticker">
+                        <!--                        <img class="sticker-sale" src="images/sticker-sale.webp">-->
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <p class="card-text mb-1">Love Goes - Sam Smith</p>
+                    <div class="card-price-container">
+                        <del class="price-original text-secondary">250,000₫</del>
+                        <span class="price-sale">100,000₫</span>
+                    </div>
+                    <div class="card-cart">
+                        <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card border-0 col-6 col-md-4 col-lg-3">
+                <div class="card-image position-relative">
+                    <img class="card-img-top" src="images/product-image-2.jpg" alt="Card image" style="width:100%">
+                    <div class="card-fav-container text-center">
+                        <a class="card-fav d-flex align-items-center justify-content-center" href="#">
+                            <i class="fas fa-heart"></i>
+                        </a>
+                    </div>
+                    <div class="sticker">
+                        <!--                        <img class="sticker-sale" src="images/sticker-sale.webp">-->
+                    </div>
+                </div>
+                <div class="card-body text-center">
+                    <p class="card-text mb-1">Love Goes - Sam Smith</p>
+                    <div class="card-price-container">
+                        <del class="price-original text-secondary">250,000₫</del>
+                        <span class="price-sale">100,000₫</span>
+                    </div>
+                    <div class="card-cart">
+                        <a href="#" class="btn btn-danger px-4 mt-3">Add to Cart</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-7">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-3 logo-container">
+                            <img class="img-fluid" src="images/brand-logo.png">
+                        </div>
+                        <div class="col-12 col-md-9" id="introduction">
+                            If you're looking for where to buy CD and records, you've come to the right place! Welcome
+                            to Xshady Records Store. Build your dream music collection with our wide selection of albums
+                            including new releases, bestsellers, and retro classics, like The Beatles, Eagles, Elton
+                            John,
+                            and more. Find vinyl albums and LPs in your favorite genres, including rock, pop, country,
+                            hip-pop,
+                            and more.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-1"></div>
+            <div class="col-12 col-sm-4">
+                <div id="contact-detail">
+                    <div class="mb-1">Address: 70 Nguyen Hoang, Nam Tu Liem, Hanoi</div>
+                    <div class="mb-1">Phone: 0936 666 999</div>
+                    <div class="">Email: contact@xshadyrecords.com</div>
+                    <div id="social-media" class="mt-3">
+                        <a href="#"><i class="fab fa-facebook pr-1"></i></a>
+                        <a href="#"><i class="fab fa-youtube pr-1"></i></a>
+                        <a href="#"><i class="fab fa-instagram-square pr-1"></i></a>
+                        <a href="#"><i class="fab fa-tumblr-square pr-1"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center my-3">© 2020 Group 1 - T2009M1 - FPT Aptech</div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div id="cart">
+    <div class="cart-title-container p-4 d-flex justify-content-between align-items-center font-weight-bold">
+        <div class="cart-title m-0 h5">Cart</div>
+        <div class="cart-close">&#10005;</div>
+    </div>
+    <div class="cart-content border-top border-bottom">
+        <div class="row py-4 mx-4 border-bottom">
+            <div class="col-4 d-flex align-items-center">
+                <img src="images/product-image-1.webp" class="img-fluid">
+            </div>
+            <div class="col-8">
+                <div class="cart-product-name">willow - lonely witch version digital download</div>
+                <div class="cart-product-price">$0.99</div>
+                <div class="cart-quantity-control d-flex justify-content-around align-items-center mt-2">
+                    <form class="form-group row m-0">
+                        <div class="col-3 p-0">
+                            <button class="btn btn-danger btn-sm form-control">&minus;</button>
+                        </div>
+                        <div class="col-6 p-0">
+                            <input type="number" value="0" class="form-control">
+                        </div>
+                        <div class="col-3 p-0">
+                            <button class="btn btn-danger btn-sm form-control">&#43;</button>
+                        </div>
+                    </form>
+                    <a class="cart-remove text-dark ml-4" href="#">Remove</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-total d-flex justify-content-center align-items-center p-3">
+        <button class="btn btn-danger btn-block">Cart
+            <span class="cart-value">$9.99</span>
+        </button>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="javascripts/index.js"></script>
+</body>
+</html>
