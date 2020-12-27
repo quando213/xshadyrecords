@@ -134,6 +134,7 @@ h2.title {
     .carousel-multiple .carousel-inner .carousel-item-next {
         transform: translateX(50%);
     }
+
     .carousel-multiple .carousel-inner .carousel-item-left.active,
     .carousel-multiple .carousel-inner .carousel-item-prev {
         transform: translateX(-50%);
@@ -146,6 +147,7 @@ h2.title {
     .carousel-multiple .carousel-inner .carousel-item-next {
         transform: translateX(33%);
     }
+
     .carousel-multiple .carousel-inner .carousel-item-left.active,
     .carousel-multiple .carousel-inner .carousel-item-prev {
         transform: translateX(-33%);
@@ -158,6 +160,7 @@ h2.title {
     .carousel-multiple .carousel-inner .carousel-item-next {
         transform: translateX(25%);
     }
+
     .carousel-multiple .carousel-inner .carousel-item-left.active,
     .carousel-multiple .carousel-inner .carousel-item-prev {
         transform: translateX(-25%);
@@ -236,19 +239,24 @@ i.fab.fa-twitter-square:hover {
     width: 400px;
     z-index: 10;
 }
+
 .cart-title-container, .cart-total {
     height: 70px;
 }
+
 .close:hover {
     cursor: pointer;
 }
+
 .cart-content {
     height: calc(100vh - 140px);
     overflow: auto;
 }
+
 .cart-content button {
     height: 38px;
 }
+
 .cart-close:hover {
     cursor: pointer;
 }
