@@ -74,6 +74,17 @@ a {
     opacity: 1;
 }
 
+/*--------------------New Releases----------------*/
+.new-releases {
+    color: #21252f;
+}
+.new-releases:hover {
+    color: grey;
+    cursor:pointer;
+}
+.container-fluid {
+    cursor:pointer;
+}
 /* PRODUCT LIST */
 h2.title:before {
     margin-right: 10px;
@@ -105,6 +116,7 @@ h2.title {
     position: absolute;
     width: 50px;
     top: 10px;
+    height: 50px;
     right: 10px;
 }
 
