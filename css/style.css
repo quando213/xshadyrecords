@@ -283,9 +283,7 @@ i.fab.fa-twitter-square:hover {
     cursor: pointer;
 }
 
-.cart-page {
-    margin: 80px auto !important;
-}
+/* CART PAGE */
 
 table {
     width: 100%;
@@ -294,10 +292,7 @@ table {
 
 .cart-info {
     display: flex;
-    flex-wrap: wrap;
 }
-
-/* CART PAGE */
 
 th {
     text-align: left;
@@ -318,18 +313,13 @@ td input {
 }
 
 td a {
-    color: #dc3545;
     font-size: 12px;
-}
-td a:hover{
-    cursor: pointer;
-    color: #dc3545;
 }
 
 td img {
     width: 80px;
     height: 80px;
-    margin-right: 10px;
+    object-fit: cover;
 }
 
 .total-price {
@@ -338,7 +328,7 @@ td img {
 }
 
 .total-price table {
-    border-top: 2px solid black;
+    border-top: 3px solid #dc3545;
     width: 100%;
     max-width: 400px;
 }
@@ -350,6 +340,7 @@ td:last-child {
 th:last-child {
     text-align: right;
 }
+
 .path{
     text-align: center;
     margin: auto;
