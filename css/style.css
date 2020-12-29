@@ -134,10 +134,20 @@ h2.title {
 .card:hover .card-fav-container {
     opacity: 1;
 }
-
+.card-body {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
 .card-image .card-fav {
     padding: 10px;
     color: white;
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Multiple Item Carousel */
