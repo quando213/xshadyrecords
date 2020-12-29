@@ -295,14 +295,20 @@ i.fab.fa-twitter-square:hover {
         padding: 0 16px 16px;
         width: 100%;
     }
-
     .menu-items {
         width: 100%;
     }
-    img.img-fluid {
-        width: 30%;
-    }
-    #introduction, #contact-detail {
+    #introduction, #Information {
         padding-left: 30px;
+    }
+}
+@media screen and (max-width: 990px) {
+    .logo-footer img.img-fluid {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 770px) {
+    .logo-footer img.img-fluid {
+        width: 30%;
     }
 }
