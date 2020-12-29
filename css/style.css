@@ -272,3 +272,31 @@ i.fab.fa-twitter-square:hover {
 .cart-close:hover {
     cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+    .header .logo-container img {
+        height: 70px;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 5;
+        background-color: white;
+    }
+
+    .wrapper {
+        position: relative;
+        top: 100px;
+    }
+
+    .navbar .form-group {
+        padding: 0 16px 16px;
+        width: 100%;
+    }
+
+    .menu-items {
+        width: 100%;
+    }
+}
