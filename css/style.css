@@ -372,29 +372,20 @@ th:last-child {
         padding: 0 16px 16px;
         width: 100%;
     }
+
     .menu-items {
         width: 100%;
     }
+
     #introduction, #Information {
         padding-left: 30px;
     }
+
     footer img.img-fluid {
         width: 30%;
-    }
-  
-    #introduction, #contact-detail {
-        padding-left: 30px;
     }
 
     #cart {
         width: 100%;
-    }
-  .logo-footer img.img-fluid {
-        width: 30%;
-    }
-}
-@media screen and (max-width: 990px) {
-    .logo-footer img.img-fluid {
-        width: 70%;
     }
 }
