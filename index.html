@@ -22,12 +22,19 @@
 <header class="container mx-auto">
     <div class="header border-bottom">
         <div class="d-flex justify-content-between align-items-center">
-            <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse"
-                    data-target="#collapsibleNavbar">
+            <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
                 <i class="fas fa-bars"></i>
             </button>
-            <div class="user-container d-none d-md-block">
-                <div class="sign-in-text"><i class="fas fa-cog mr-2"></i>Sign In</div>
+            <div class="user-container d-none d-md-block dropdown">
+                <div class="sign-in-text dropdown-toggle" data-toggle="dropdown">
+                    <i class="fas fa-cog mr-2 "></i>
+                    Account
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">View Profile</a>
+                        <a class="dropdown-item" href="#">Wish List</a>
+                        <a class="dropdown-item" href="#">Sign Out</a>
+                    </div>
+                </div>
             </div>
             <div class="logo-container my-2">
                 <img src="images/brand-logo.png" alt="Xshady Records">
@@ -46,7 +53,9 @@
                 <a class="mr-4" href="">Products</a>
                 <a class="mr-4" href="">About</a>
                 <a class="" href="">Contact</a>
-                <a class="mr-4 d-md-none" href="">Sign In</a>
+                <a class="mr-4 d-md-none" href="">View Profile</a>
+                <a class="mr-4 d-md-none" href="">Wish List</a>
+                <a class="mr-4 d-md-none" href="">Sign Out</a>
             </nav>
         </div>
         <div class="form-group d-flex align-items-center m-0">
@@ -55,7 +64,6 @@
         </div>
     </div>
 </header>
-
 <div class="wrapper">
     <div class="container mb-4">
         <div id="carousel-home" class="carousel slide" data-ride="carousel">

@@ -73,7 +73,9 @@ a {
     right: 20px;
     opacity: 1;
 }
-
+.sign-in-text:hover>.dropdown-menu {
+    display: block;
+}
 /*--------------------New Releases----------------*/
 .new-releases {
     color: #21252f;
@@ -135,8 +137,8 @@ h2.title {
     opacity: 1;
 }
 .card-body {
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 .card-image .card-fav {
     padding: 10px;
