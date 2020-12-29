@@ -220,24 +220,24 @@ i.fab {
     color: black;
 }
 
-i.fab.fa-facebook:hover {
-    color: #072f98;
+i.fab.fa-facebook-square:hover {
+    color: #1198f5;
 }
 
-i.fab.fa-youtube:hover {
+i.fab.fa-youtube-square:hover {
     color: red;
 }
 
 i.fab.fa-instagram-square:hover {
-    color: #e90c74;
+    color: #c837ac;
 }
 
 i.fab.fa-tumblr-square:hover {
-    color: #2f5288;
+    color: #314358;
 }
 
 i.fab.fa-twitter-square:hover {
-    color: #3636ff;
+    color: #1c9cea;
 }
 
 /* CART */
