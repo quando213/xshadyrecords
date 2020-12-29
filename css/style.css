@@ -299,4 +299,10 @@ i.fab.fa-twitter-square:hover {
     .menu-items {
         width: 100%;
     }
+    img.img-fluid {
+        width: 30%;
+    }
+    #introduction, #contact-detail {
+        padding-left: 30px;
+    }
 }
