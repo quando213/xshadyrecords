@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--    <meta property="og:image" content="http://gatgat.herokuapp.com/img/apple-music-image.png">-->
+    <meta name="description"
+          content="Build your dream music collection with our wide selection of albums including new releases, bestsellers, and retro classics.">
+    <title>Xshady Records</title>
+    <!--    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">-->
+    <!--    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">-->
+    <script src="https://kit.fontawesome.com/2a33a147b1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!--    <link rel="stylesheet" href="css/bootstrap-dark.min.css">-->
+    <!--    <link rel="stylesheet" href="css/toggle-bootstrap.css">-->
+    <!--    <link rel="stylesheet" href="css/toggle-bootstrap-dark.css">-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<div class="wrapper">
+    <header class="container mx-auto">
+        <div class="header border-bottom">
+            <div class="d-flex justify-content-between align-items-center">
+                <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="user-container d-none d-md-block">
+                    <div class="sign-in-text"><i class="fas fa-cog mr-2"></i>Sign In</div>
+                </div>
+                <div class="logo-container my-2">
+                    <img src="images/brand-logo.png" alt="Xshady Records">
+                </div>
+                <div class="cart-container">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-quantity">2</span>
+                </div>
+            </div>
+        </div>
+        <div class="navbar p-0 collapse d-md-flex" id="collapsibleNavbar">
+            <div class="d-flex justify-content-between align-items-center menu-items">
+                <i class="fas fa-home mr-2 bg-danger px-3 py-2 text-light d-none d-md-block"></i>
+                <nav class="d-flex flex-column flex-md-row p-3 text-dark">
+                    <a class="mr-4" href="">Home</a>
+                    <a class="mr-4" href="">Products</a>
+                    <a class="mr-4" href="">About</a>
+                    <a class="" href="">Contact</a>
+                    <a class="mr-4 d-md-none" href="">Sign In</a>
+                </nav>
+            </div>
+            <div class="form-group d-flex align-items-center m-0">
+                <label for="search" class="mb-0 d-none d-md-block"><i class="fas fa-search mr-2"></i></label>
+                <input type="text" class="form-control" id="search" placeholder="Search">
+            </div>
+        </div>
+    </header>
+    <div class="container pt-3">
+        <div class="path">
+            <h6 class="my-2">Home / Sign Up</h6>
+        </div>
+    </div>
+    <form class="form-group text-center my-4" id="signUpForm" method="post" autocomplete="off">
+        <input type="text" class="form-control" name="firstName" placeholder="First Name">
+        <input type="text" class="form-control" name="lastName" placeholder="Last Name">
+        <input type="email" class="form-control" name="email" placeholder="Email">
+        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+        <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password">
+        <button class="btn btn-danger btn-block" type="submit">Submit</button>
+        <a href="sign-in.html" class="d-block text-dark mt-3">Already Have an Account? Sign In</a>
+    </form>
+    <footer class="pt-3">
+        <div class="container">
+            <div class="row pt-2 pb-4">
+                <div class="col-12 col-lg-2 logo-footer">
+                    <img class="img-fluid" src="images/brand-logo.png">
+                </div>
+                <div class="col-12 col-lg-5 pt-3" id="introduction">
+                    If you're looking for where to buy CD and records, you've come to the right place! Welcome
+                    to Xshady Records Store. Build your dream music collection with our wide selection of albums
+                    including new releases, bestsellers, and retro classics, like The Beatles, Eagles, Elton
+                    John,
+                    and more. Find vinyl albums and LPs in your favorite genres, including rock, pop, country,
+                    hip-pop,
+                    and more.
+                </div>
+                <div class="col-12 col-lg-1 p-0"></div>
+                <div class="col-12 col-lg-4 pt-3" id="Information">
+                    <div id="contact-detail">
+                        <div class="d-inline-block">
+                            <div class="mb-1">Address:</div>
+                            <div class="mb-1">Phone:</div>
+                            <div class="">Email:</div>
+                        </div>
+                        <div class="d-inline-block ml-1">
+                            <div class="mb-1">70 Nguyen Hoang, Nam Tu Liem, Hanoi</div>
+                            <div class="mb-1">0936 666 999</div>
+                            <div class="mb-3">contact@xshadyrecords.com</div>
+                        </div>
+                        <div id="social-media">
+                            <a href="#"><i class="fab fa-facebook-square pr-1"></i></a>
+                            <a href="#"><i class="fab fa-youtube-square pr-1"></i></a>
+                            <a href="#"><i class="fab fa-instagram-square pr-1"></i></a>
+                            <a href="#"><i class="fab fa-tumblr-square pr-1"></i></a>
+                            <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center bg-white py-2">© 2020 Xshady Records. All rights reserved.</div>
+    </footer>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+<script src="javascripts/sign-up.js"></script>
+</body>
+</html>
