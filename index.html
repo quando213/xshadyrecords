@@ -107,7 +107,7 @@
             </div>
         </div>
         <div class="container-fluid p-0">
-            <div id="carousel-new-releases" class="carousel slide" data-ride="#demo">
+            <div id="carousel-new-releases" class="carousel slide" data-ride="carousel" data-interval="false">
                 <div class="container carousel-inner w-100 p-0" role="listbox">
                     <div class="carousel-item active">
                         <div class="card border-0 col-6 col-md-4 col-lg-3">
@@ -187,7 +187,7 @@
                     <div class="carousel-item">
                         <div class="card border-0 col-6 col-md-4 col-lg-3">
                             <div class="card-image position-relative">
-                                <img class="card-img-top" src="images/product-image-4.png" alt="Card image">
+                                <img class="card-img-top" src="images/product-image-4.jpg" alt="Card image">
                                 <div class="card-fav-container text-center">
                                     <a class="card-fav d-flex align-items-center justify-content-center" href="#">
                                         <i class="fas fa-heart"></i>
@@ -242,7 +242,7 @@
     <div class="container carousel-multiple">
         <div class="title-container d-flex justify-content-between">
             <h2 class="title">
-                Pre Order
+                Pre-Order
             </h2>
             <div class="product-list-control d-flex mt-2">
                 <a class="new-releases" href="#pre-order" data-slide="prev">
@@ -254,7 +254,7 @@
             </div>
         </div>
         <div class="container-fluid p-0">
-            <div id="pre-order" class="carousel slide" data-ride="#demo">
+            <div id="pre-order" class="carousel slide" data-ride="carousel" data-interval="false">
                 <div class="container carousel-inner w-100 p-0" role="listbox">
                     <div class="carousel-item active">
                         <div class="card border-0 col-6 col-md-4 col-lg-3">
@@ -334,7 +334,7 @@
                     <div class="carousel-item">
                         <div class="card border-0 col-6 col-md-4 col-lg-3">
                             <div class="card-image position-relative">
-                                <img class="card-img-top" src="images/product-image-4.png" alt="Card image">
+                                <img class="card-img-top" src="images/product-image-4.jpg" alt="Card image">
                                 <div class="card-fav-container text-center">
                                     <a class="card-fav d-flex align-items-center justify-content-center" href="#">
                                         <i class="fas fa-heart"></i>
@@ -413,16 +413,16 @@
                 Best Sellers
             </h2>
             <div class="product-list-control d-flex mt-2">
-                <a class="new-releases" href="#pre-order" data-slide="prev">
+                <a class="new-releases" href="#best-sellers" data-slide="prev">
                     <i class="fas fa-chevron-left pr-3 border-right"></i>
                 </a>
-                <a class="new-releases" href="#pre-order" data-slide="next">
+                <a class="new-releases" href="#best-sellers" data-slide="next">
                     <i class="fas fa-chevron-right pl-3"></i>
                 </a>
             </div>
         </div>
         <div class="container-fluid p-0 mb-3">
-            <div id="best-sellers" class="carousel slide" data-ride="#demo">
+            <div id="best-sellers" class="carousel slide" data-ride="carousel" data-interval="false">
                 <div class="container carousel-inner w-100 p-0" role="listbox">
                     <div class="carousel-item active">
                         <div class="card border-0 col-6 col-md-4 col-lg-3">
@@ -502,7 +502,7 @@
                     <div class="carousel-item">
                         <div class="card border-0 col-6 col-md-4 col-lg-3">
                             <div class="card-image position-relative">
-                                <img class="card-img-top" src="images/product-image-4.png" alt="Card image">
+                                <img class="card-img-top" src="images/product-image-4.jpg" alt="Card image">
                                 <div class="card-fav-container text-center">
                                     <a class="card-fav d-flex align-items-center justify-content-center" href="#">
                                         <i class="fas fa-heart"></i>
@@ -556,13 +556,13 @@
     <!------------------------------------footer--------------------------------------->
 
 
-    <footer class="pt-5">
+    <footer class="pt-3">
         <div class="container">
-            <div class="row">
-                <div class="col-12 text-center col-md-3 col-lg-2">
+            <div class="row pt-2 pb-4">
+                <div class="col-12 col-lg-2 logo-footer">
                     <img class="img-fluid" src="images/brand-logo.png">
                 </div>
-                <div class="col-12 col-md-9 col-lg-5 pt-3" id="introduction">
+                <div class="col-12 col-lg-5 pt-3" id="introduction">
                     If you're looking for where to buy CD and records, you've come to the right place! Welcome
                     to Xshady Records Store. Build your dream music collection with our wide selection of albums
                     including new releases, bestsellers, and retro classics, like The Beatles, Eagles, Elton
@@ -571,8 +571,8 @@
                     hip-pop,
                     and more.
                 </div>
-                <div class="col-12 col-sm-3 col-lg-1"></div>
-                <div class="col-12 col-sm-7 col-lg-4 pt-3">
+                <div class="col-12 col-lg-1 p-0"></div>
+                <div class="col-12 col-lg-4 pt-3" id="Information">
                     <div id="contact-detail">
                         <div class="d-inline-block">
                             <div class="mb-1">Address:</div>
@@ -584,7 +584,7 @@
                             <div class="mb-1">0936 666 999</div>
                             <div class="mb-3">contact@xshadyrecords.com</div>
                         </div>
-                        <div id="social-media" class="text-center mt-3">
+                        <div id="social-media">
                             <a href="#"><i class="fab fa-facebook-square pr-1"></i></a>
                             <a href="#"><i class="fab fa-youtube-square pr-1"></i></a>
                             <a href="#"><i class="fab fa-instagram-square pr-1"></i></a>
@@ -595,8 +595,44 @@
                 </div>
             </div>
         </div>
-        <div class="text-center bg-white my-3">© 2020 Xshady Records. All rights reserved.</div>
+        <div class="text-center bg-white py-2">© 2020 Xshady Records. All rights reserved.</div>
     </footer>
+</div>
+<div id="cart">
+    <div class="cart-title-container p-4 d-flex justify-content-between align-items-center font-weight-bold">
+        <div class="cart-title m-0 h5">Cart</div>
+        <div class="cart-close">&#10005;</div>
+    </div>
+    <div class="cart-content border-top border-bottom">
+        <div class="row py-4 mx-4 border-bottom">
+            <div class="col-4 d-flex align-items-center">
+                <img src="images/product-image-1.webp" class="img-fluid">
+            </div>
+            <div class="col-8">
+                <div class="cart-product-name">willow - lonely witch version digital download</div>
+                <div class="cart-product-price">$0.99</div>
+                <div class="cart-quantity-control d-flex justify-content-around align-items-center mt-2">
+                    <form class="form-group row m-0">
+                        <div class="col-3 p-0">
+                            <button class="btn btn-danger btn-sm form-control">&minus;</button>
+                        </div>
+                        <div class="col-6 p-0">
+                            <input type="number" value="0" class="form-control">
+                        </div>
+                        <div class="col-3 p-0">
+                            <button class="btn btn-danger btn-sm form-control">&#43;</button>
+                        </div>
+                    </form>
+                    <a class="cart-remove text-dark ml-4" href="#">Remove</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cart-total d-flex justify-content-center align-items-center p-3">
+        <button class="btn btn-danger btn-block">Cart
+            <span class="cart-value">$9.99</span>
+        </button>
+    </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
