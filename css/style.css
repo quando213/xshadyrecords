@@ -281,7 +281,8 @@ i.fab.fa-twitter-square:hover {
     header {
         position: fixed;
         top: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 5;
         background-color: white;
     }
@@ -297,6 +298,10 @@ i.fab.fa-twitter-square:hover {
     }
 
     .menu-items {
+        width: 100%;
+    }
+
+    #cart {
         width: 100%;
     }
 }
