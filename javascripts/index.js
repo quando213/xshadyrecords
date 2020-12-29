@@ -8,10 +8,6 @@ $('.cart-close').click(function () {
 })
 
 // Product list carousel
-$('.carousel-multiple').carousel({
-    interval: 0
-})
-
 $('.carousel-multiple .carousel-item').each(function() {
     var minPerSlide = 4;
     var next = $(this).next();
