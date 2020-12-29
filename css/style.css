@@ -134,10 +134,20 @@ h2.title {
 .card:hover .card-fav-container {
     opacity: 1;
 }
-
+.card-body {
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
 .card-image .card-fav {
     padding: 10px;
     color: white;
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Multiple Item Carousel */
@@ -273,6 +283,72 @@ i.fab.fa-twitter-square:hover {
     cursor: pointer;
 }
 
+/* CART PAGE */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-info {
+    display: flex;
+}
+
+th {
+    text-align: left;
+    padding: 5px;
+    color: black;
+    background:#fff;
+    font-weight: normal;
+}
+
+td {
+    padding: 10px 5px;
+}
+
+td input {
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+td a {
+    font-size: 12px;
+}
+
+td img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.total-price {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price table {
+    border-top: 3px solid #dc3545;
+    width: 100%;
+    max-width: 400px;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+th:last-child {
+    text-align: right;
+}
+
+.path{
+    text-align: center;
+    margin: auto;
+    background: whitesmoke;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 @media screen and (max-width: 767px) {
     .header .logo-container img {
         height: 70px;
@@ -281,7 +357,8 @@ i.fab.fa-twitter-square:hover {
     header {
         position: fixed;
         top: 0;
-        left: 0;
+        left: 50%;
+        transform: translateX(-50%);
         z-index: 5;
         background-color: white;
     }
@@ -301,14 +378,23 @@ i.fab.fa-twitter-square:hover {
     #introduction, #Information {
         padding-left: 30px;
     }
+    footer img.img-fluid {
+        width: 30%;
+    }
+  
+    #introduction, #contact-detail {
+        padding-left: 30px;
+    }
+
+    #cart {
+        width: 100%;
+    }
+  .logo-footer img.img-fluid {
+        width: 30%;
+    }
 }
 @media screen and (max-width: 990px) {
     .logo-footer img.img-fluid {
         width: 70%;
-    }
-}
-@media screen and (max-width: 770px) {
-    .logo-footer img.img-fluid {
-        width: 30%;
     }
 }
