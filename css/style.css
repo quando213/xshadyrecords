@@ -77,6 +77,27 @@ a {
     display: block;
     margin-top: 0;
 }
+/*---------------favorite product-----------------*/
+.f-right {
+    left: 0;
+    display: none;
+}
+.f-right:hover {
+    display: block;
+}
+.section-header__right {
+    display: inline-block;
+    position: relative;
+}
+.sort {
+    border-bottom: 1px solid lightgrey;
+}
+.border-none{
+    border: none;
+}
+.bt-light-gray {
+    border-top: 1px solid lightgrey;
+}
 /*--------------------New Releases----------------*/
 .new-releases {
     color: #21252f;
