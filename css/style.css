@@ -457,3 +457,25 @@ form label.error {
         width: 100%;
     }
 }
+
+
+/*---------------category------------*/
+.CoverImage {
+    width: 100%;
+}
+.SortBy {
+    border: none;
+    cursor: pointer;
+}
+.SortBy:hover{
+    background-color: whitesmoke;
+}
+.page-link {
+    color: #444444;
+    border: none;
+}
+@media screen and (max-width: 767px) {
+    .Category {
+        display: none;
+    }
+}
