@@ -357,8 +357,7 @@ td img {
     width: 100%;
     max-width: 400px;
 }
-
-td:last-child {
+.c table tr td:last-child {
     text-align: right;
 }
 
@@ -372,3 +371,13 @@ th:last-child {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+.sign-in-text:hover>.dropdown-menu{
+    display: block;
+}
+.table tbody tr td a{
+    color: black;
+}
+.table tbody tr td a:hover{
+    color: red;
+}
+
