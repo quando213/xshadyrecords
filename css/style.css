@@ -377,7 +377,15 @@ th:last-child {
 .table tbody tr td a{
     color: black;
 }
-.table tbody tr td a:hover{
-    color: red;
+
+.table th{
+    border-top: none !important;
+}
+.table tr th,td {
+    cursor: pointer;
+    color: black;
+}
+.table tr:hover{
+    color: red!important;
 }
 
