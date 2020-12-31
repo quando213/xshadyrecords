@@ -20,7 +20,8 @@
 <header class="container mx-auto">
     <div class="header border-bottom">
         <div class="d-flex justify-content-between align-items-center">
-            <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target=".collapsibleNavbar">
+            <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse"
+                    data-target=".collapsibleNavbar">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="user-container d-none d-md-block dropdown">
@@ -72,16 +73,19 @@
     </div>
     <div class="container py-5">
         <div class="row mt-2">
-            <div class="col-md-9 col-sm-6 col-12 ">
+            <div class="col-md-9 table-responsive">
                 <h4>Order History</h4>
-                <table class="table table-hover">
+                <table class=" table table-hover">
+                    <thead>
                     <tr class="bg-danger">
                         <th class="bg-danger text-light rounded-left">OrderID</th>
                         <th class="bg-danger text-light">Order Date</th>
-                        <th class="bg-danger text-light">Payment status</th>
+                        <th class="bg-danger text-light">Payment Status</th>
                         <th class="bg-danger text-light">Completion Status</th>
-                        <th class="bg-danger text-light rounded-right">Total<th>
+                        <th class="bg-danger text-light rounded-right">Total
+                        <th>
                     </tr>
+                    </thead>
                     <tr data-href="index.html">
                         <td><a href="">#A0001</a></td>
                         <td>20/01/2021 19:15:01</td>
@@ -113,10 +117,11 @@
                     </tr>
                 </table>
             </div>
+
             <div class="col-md-3 col-12">
                 <h4>Account Details</h4>
                 <div class="d-inline-block mt-2">
-                    <div class="mb-2">Name: Nguyen Hoang </div>
+                    <div class="mb-2">Name: Nguyen Hoang</div>
                     <div class="mb-2">Address: 70 Nguyen Hoang, Nam Tu Liem, Hanoi</div>
                     <div class="mb-2">Phone: 0936 666 999</div>
                     <div class="mb-2">Email: 01012002@gmail.com</div>
@@ -169,7 +174,6 @@
         <div class="text-center bg-white my-3">© 2020 Xshady Records. All rights reserved.</div>
     </footer>
 </div>
-
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
