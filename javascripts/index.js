@@ -23,3 +23,12 @@ $('.carousel-multiple .carousel-item').each(function() {
         next.children(':first-child').clone().appendTo($(this));
     }
 });
+document.addEventListener("DOMContentLoaded",()=>{
+    const rows = document.querySelectorAll("tr[data-href]");
+
+    rows.forEach(row =>{
+        row.addEventListener("click",() =>{
+            window.location.href = row.dataset.href;
+        });
+    });
+});
