@@ -30,7 +30,9 @@
 a {
     text-decoration: none !important;
 }
-
+.p-relative {
+    position: relative;
+}
 /* HEADER */
 .navbar a {
     color: inherit !important;
@@ -97,6 +99,9 @@ a {
 }
 .bt-light-gray {
     border-top: 1px solid lightgrey;
+}
+.mx-auto {
+    position: relative;
 }
 /*--------------------New Releases----------------*/
 .new-releases {
