@@ -483,13 +483,6 @@ form label.error {
     border-bottom: 1px solid #e1e1e1;
     border-top: 1px solid #e1e1e1;
 }
-.NextProduct {
-    cursor: pointer;
-    color: #000000;
-}
-.NextProduct:hover {
-    color: #454444;
-}
 .mousetrap {
     width: 90%;
 }
