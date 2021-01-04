@@ -30,7 +30,9 @@
 a {
     text-decoration: none !important;
 }
-
+.p-relative {
+    position: relative;
+}
 /* HEADER */
 .navbar a {
     color: inherit !important;
@@ -76,6 +78,30 @@ a {
 .sign-in-text:hover > .dropdown-menu {
     display: block;
     margin-top: 0;
+}
+/*---------------favorite product-----------------*/
+.f-right {
+    left: 0;
+    display: none;
+}
+.f-right:hover {
+    display: block;
+}
+.section-header__right {
+    display: inline-block;
+    position: relative;
+}
+.sort {
+    border-bottom: 1px solid lightgrey;
+}
+.border-none{
+    border: none;
+}
+.bt-light-gray {
+    border-top: 1px solid lightgrey;
+}
+.mx-auto {
+    position: relative;
 }
 /*--------------------New Releases----------------*/
 .new-releases {
@@ -336,7 +362,7 @@ td img {
     max-width: 400px;
 }
 
-td:last-child {
+.c table tr td:last-child {
     text-align: right;
 }
 
@@ -350,6 +376,33 @@ th:last-child {
     background: whitesmoke;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+.sign-in-text:hover>.dropdown-menu{
+    display: block;
+}
+
+.table tbody tr td a{
+    color: black;
+}
+
+.table th{
+    border-top: none !important;
+}
+
+.table tr th,td {
+    cursor: pointer;
+    color: black;
+}
+
+.table tr:hover{
+    color: red!important;
+}
+.tect-profile{
+    word-break: break-all;
+}
+.table thead th {
+    border-bottom: none !important;
 }
 
 /* SIGN IN, SIGN UP FORM */
@@ -375,81 +428,6 @@ form label.error {
     display: flex;
 }
 
-/* form sign-in ------------------------------------------- */
-
-
-
-/*input[type=email], select {*/
-/*    width: 100%;*/
-/*    padding: 12px 20px;*/
-/*    margin: 8px 0;*/
-/*    display: inline-block;*/
-/*    border: 1px solid #e1e1e1;*/
-/*    box-sizing: border-box;*/
-/*}*/
-
-/*input[type=password], select {*/
-/*    width: 100%;*/
-/*    padding: 12px 20px;*/
-/*    margin: 8px 0;*/
-/*    display: inline-block;*/
-/*    border: 1px solid #e1e1e1;*/
-/*    box-sizing: border-box;*/
-/*}*/
-
-/*.icon-form-1 {*/
-/*    margin-top: -59px;*/
-/*    margin-left: 100px;*/
-/*    position: absolute;*/
-/*    width: 53px;*/
-/*    height: 50px;*/
-/*}*/
-
-/*.icon-form-2 {*/
-/*    margin-top: -59px;*/
-/*    margin-left: 360px;*/
-/*    position: absolute;*/
-/*    width: 53px;*/
-/*    height: 50px;*/
-/*}*/
-
-/*input[type=radio] {*/
-/*    margin-top: 8px;*/
-/*}*/
-
-/*input[type=submit]:hover {*/
-/*    background-color: #cccccc;*/
-/*    color: lightgrey;*/
-/*}*/
-
-/*input[type=submit] {*/
-/*    width: 100%;*/
-/*    padding: 8px 20px;*/
-/*    margin: 8px 0;*/
-/*    display: inline-block;*/
-/*    border: 1px solid #e1e1e1;*/
-/*    box-sizing: border-box;*/
-/*    background: black;*/
-/*    color: white;*/
-/*    cursor: pointer;*/
-/*}*/
-
-/*pre {*/
-/*    font-size: 16px;*/
-/*    text-align: center;*/
-/*    cursor: pointer;*/
-/*    margin-top: 6px;*/
-/*}*/
-
-/*pre:hover {*/
-/*    color: blue;*/
-/*}*/
-
-/*footer {*/
-/*    margin-top: 20px;*/
-/*}*/
-
-
 @media screen and (max-width: 767px) {
     .header .logo-container img {
         height: 70px;
@@ -458,8 +436,6 @@ form label.error {
     header {
         position: fixed;
         top: 0;
-        left: 50%;
-        transform: translateX(-50%);
         z-index: 5;
         background-color: white;
     }
@@ -491,4 +467,31 @@ form label.error {
     }
 }
 
-/* thong tin don hang */
+/*---------------category------------*/
+.CoverImage {
+    width: 100%;
+}
+.SortBy {
+    border: none;
+    cursor: pointer;
+}
+.SortBy:hover{
+    background-color: whitesmoke;
+}
+.page-link {
+    color: #444444;
+    border: none;
+}
+@media screen and (max-width: 767px) {
+    .Category {
+        display: none;
+    }
+}
+ /*---------product-details-------*/
+.add-this {
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+}
+.mousetrap {
+    width: 90%;
+}
