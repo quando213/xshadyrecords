@@ -30,7 +30,9 @@
 a {
     text-decoration: none !important;
 }
-
+.p-relative {
+    position: relative;
+}
 /* HEADER */
 .navbar a {
     color: inherit !important;
@@ -73,7 +75,34 @@ a {
     right: 20px;
     opacity: 1;
 }
-
+.sign-in-text:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+/*---------------favorite product-----------------*/
+.f-right {
+    left: 0;
+    display: none;
+}
+.f-right:hover {
+    display: block;
+}
+.section-header__right {
+    display: inline-block;
+    position: relative;
+}
+.sort {
+    border-bottom: 1px solid lightgrey;
+}
+.border-none{
+    border: none;
+}
+.bt-light-gray {
+    border-top: 1px solid lightgrey;
+}
+.mx-auto {
+    position: relative;
+}
 /*--------------------New Releases----------------*/
 .new-releases {
     color: #21252f;
@@ -134,10 +163,20 @@ h2.title {
 .card:hover .card-fav-container {
     opacity: 1;
 }
-
+.card-body {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
 .card-image .card-fav {
     padding: 10px;
     color: white;
+}
+
+.card-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 /* Multiple Item Carousel */
@@ -273,36 +312,7 @@ i.fab.fa-twitter-square:hover {
     cursor: pointer;
 }
 
-@media screen and (max-width: 767px) {
-    .header .logo-container img {
-        height: 70px;
-    }
-
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        z-index: 5;
-        background-color: white;
-    }
-
-    .wrapper {
-        position: relative;
-        top: 100px;
-    }
-
-    .navbar .form-group {
-        padding: 0 16px 16px;
-        width: 100%;
-    }
-
-    .menu-items {
-        width: 100%;
-    }
-}
-.cart-page {
-    margin: 80px auto !important;
-}
+/* CART PAGE */
 
 table {
     width: 100%;
@@ -311,7 +321,6 @@ table {
 
 .cart-info {
     display: flex;
-    flex-wrap: wrap;
 }
 
 th {
@@ -333,18 +342,13 @@ td input {
 }
 
 td a {
-    color: #dc3545;
     font-size: 12px;
-}
-td a:hover{
-    cursor: pointer;
-    color: #dc3545;
 }
 
 td img {
     width: 80px;
     height: 80px;
-    margin-right: 10px;
+    object-fit: cover;
 }
 
 .total-price {
@@ -353,10 +357,11 @@ td img {
 }
 
 .total-price table {
-    border-top: 2px solid black;
+    border-top: 3px solid #dc3545;
     width: 100%;
     max-width: 400px;
 }
+
 .c table tr td:last-child {
     text-align: right;
 }
@@ -364,6 +369,7 @@ td img {
 th:last-child {
     text-align: right;
 }
+
 .path{
     text-align: center;
     margin: auto;
@@ -371,9 +377,11 @@ th:last-child {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
 .sign-in-text:hover>.dropdown-menu{
     display: block;
 }
+
 .table tbody tr td a{
     color: black;
 }
@@ -381,10 +389,12 @@ th:last-child {
 .table th{
     border-top: none !important;
 }
+
 .table tr th,td {
     cursor: pointer;
     color: black;
 }
+
 .table tr:hover{
     color: red!important;
 }
@@ -393,4 +403,95 @@ th:last-child {
 }
 .table thead th {
     border-bottom: none !important;
+}
+
+/* SIGN IN, SIGN UP FORM */
+#signInForm, #signUpForm {
+    max-width: 400px;
+    padding: 20px;
+    margin: auto;
+}
+
+#signInForm .form-control, #signUpForm .form-control {
+    margin-bottom: 10px;
+}
+
+form input.error {
+    margin-bottom: 0 !important;
+}
+
+form label.error {
+    font-weight: bold;
+    font-size: 12px;
+    color: red;
+    margin-bottom: 15px;
+    display: flex;
+}
+
+@media screen and (max-width: 767px) {
+    .header .logo-container img {
+        height: 70px;
+    }
+
+    header {
+        position: fixed;
+        top: 0;
+        z-index: 5;
+        background-color: white;
+    }
+
+    .wrapper {
+        position: relative;
+        top: 100px;
+    }
+
+    .navbar .form-group {
+        padding: 0 16px 16px;
+        width: 100%;
+    }
+
+    .menu-items {
+        width: 100%;
+    }
+
+    #introduction, #Information {
+        padding-left: 30px;
+    }
+
+    footer img.img-fluid {
+        width: 30%;
+    }
+
+    #cart {
+        width: 100%;
+    }
+}
+
+/*---------------category------------*/
+.CoverImage {
+    width: 100%;
+}
+.SortBy {
+    border: none;
+    cursor: pointer;
+}
+.SortBy:hover{
+    background-color: whitesmoke;
+}
+.page-link {
+    color: #444444;
+    border: none;
+}
+@media screen and (max-width: 767px) {
+    .Category {
+        display: none;
+    }
+}
+ /*---------product-details-------*/
+.add-this {
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+}
+.mousetrap {
+    width: 90%;
 }
