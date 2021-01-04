@@ -398,6 +398,12 @@ th:last-child {
 .table tr:hover{
     color: red!important;
 }
+.tect-profile{
+    word-break: break-all;
+}
+.table thead th {
+    border-bottom: none !important;
+}
 
 /* SIGN IN, SIGN UP FORM */
 #signInForm, #signUpForm {
