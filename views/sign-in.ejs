@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('head'); -%>
+</head>
+<body>
+<div class="wrapper">
+    <%- include('header'); -%>
+    <div class="container pt-3">
+        <div class="path">
+            <h6 class="my-2">Home / Sign In</h6>
+        </div>
+    </div>
+    <form class="form-group text-center my-4" id="signInForm" method="post" autocomplete="off">
+        <input type="email" class="form-control" name="email" placeholder="Email">
+        <input type="password" class="form-control" name="password" placeholder="Password">
+        <div class="checkbox">
+            <label><input type="checkbox" class="mr-2" value="">Remember Me</label>
+        </div>
+        <button class="btn btn-danger btn-block" type="submit">Sign In</button>
+        <a href="sign-up.ejs" class="d-block text-dark mt-5">Create New Account</a>
+        <div class="forgot-password">Forgot Password?</div>
+    </form>
+    <%- include('footer'); -%>
+</div>
+<%- include('cart-sidebar'); -%>
+<%- include('scripts'); -%>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+<script src="/javascripts/sign-in.js"></script>
+</body>
+</html>

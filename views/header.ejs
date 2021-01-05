@@ -1,0 +1,45 @@
+<header class="container mx-auto">
+    <div class="header border-bottom">
+        <div class="d-flex justify-content-between align-items-center">
+            <button class="navbar-toggler d-md-none" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="user-container d-none d-md-block dropdown">
+                <div class="sign-in-text dropdown-toggle" data-toggle="dropdown">
+                    <i class="fas fa-cog mr-2 "></i>
+                    Account
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="profile.ejs">View Profile</a>
+                        <a class="dropdown-item" href="#">Wish List</a>
+                        <a class="dropdown-item" href="#">Sign Out</a>
+                    </div>
+                </div>
+            </div>
+            <div class="logo-container my-2">
+                <img src="/images/brand-logo.png" alt="Xshady Records">
+            </div>
+            <div class="cart-container">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-quantity">2</span>
+            </div>
+        </div>
+    </div>
+    <div class="navbar p-0 collapse d-md-flex" id="collapsibleNavbar">
+        <div class="d-flex justify-content-between align-items-center menu-items">
+            <i class="fas fa-home mr-2 bg-danger px-3 py-2 text-light d-none d-md-block"></i>
+            <nav class="d-flex flex-column flex-md-row p-3 text-dark">
+                <a class="mr-4" href="index.ejs">Home</a>
+                <a class="mr-4" href="category.html">Products</a>
+                <a class="mr-4" href="">About</a>
+                <a class="" href="">Contact</a>
+                <a class="mr-4 d-md-none" href="">View Profile</a>
+                <a class="mr-4 d-md-none" href="">Wish List</a>
+                <a class="mr-4 d-md-none" href="">Sign Out</a>
+            </nav>
+        </div>
+        <div class="form-group d-flex align-items-center m-0">
+            <label for="search" class="mb-0 d-none d-md-block"><i class="fas fa-search mr-2"></i></label>
+            <input type="text" class="form-control" id="search" placeholder="Search">
+        </div>
+    </div>
+</header>
