@@ -398,7 +398,7 @@ th:last-child {
 .table tr:hover{
     color: red!important;
 }
-.tect-profile{
+.text-profile{
     word-break: break-all;
 }
 .table thead th {
