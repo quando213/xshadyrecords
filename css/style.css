@@ -468,14 +468,14 @@ form label.error {
 }
 
 /*---------------category------------*/
-.CoverImage {
+.cover-image {
     width: 100%;
 }
-.SortBy {
+.sort-by {
     border: none;
     cursor: pointer;
 }
-.SortBy:hover{
+.sort-by:hover{
     background-color: whitesmoke;
 }
 .page-link {
