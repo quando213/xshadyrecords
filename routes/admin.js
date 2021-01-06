@@ -4,33 +4,39 @@ const router = express.Router();
 router.use(express.urlencoded({ extended: false }));
 
 const formatController = require('../controllers/formatController');
-const controller = require('../controllers/userAdminController');
+const userController = require('../controllers/userAdminController');
 const genreController = require('../controllers/genreController');
 const artistController = require("../controllers/artistController");
 
+// Dashboard
+router.get('/', function (req, res) {
+    res.render('admin/entry/index');
+});
+
+// Artist section
+router.get('/artist', artistController.list);
+
+// Format section
 router.get('/format', formatController.list)
 
 router.get('/format/create', formatController.create);
 
-router.post('/format/create', formatController.submitcreate);
+router.post('/format/create', formatController.save);
 
-
-router.get('/', controller.getDashboard);
-
-router.get('/user', controller.list);
-
+// Genre section
 router.get('/genre', genreController.list);
 
 router.get('/genre/create',genreController.create);
 
-router.get('/artist', artistController.list);
+// User section
+router.get('/user', userController.list);
 
-router.get('/user/update/:id', controller.update);
+router.get('/user/create', userController.create);
 
-router.post('/user/update/:id', controller.save);
+router.post('/user/create', userController.save);
 
-router.post('/user/create',controller.save);
+router.get('/user/update/:id', userController.update);
 
-router.get('/user/create',controller.create);
+router.post('/user/update/:id', userController.save);
 
 module.exports = router;

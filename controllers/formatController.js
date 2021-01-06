@@ -9,10 +9,10 @@ exports.list = async function (req, res) {
 exports.create = async function (req, res) {
     res.render('admin/format/form');
 }
-exports.submitcreate = async function (req, res) {
-    const dataformat = {
+exports.save = async function (req, res) {
+    const dataFormat = {
         name: req.body.format
     };
-    await Format.create(dataformat)
+    await Format.create(dataFormat)
 
 }
