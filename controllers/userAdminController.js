@@ -49,3 +49,13 @@ exports.save = async function (req, res) {
         res.send(newUser);
     }
 };
+
+
+exports.delete = async function (req, res) {
+        await User.destroy( {
+            where: {
+                id: req.params.id
+            }
+        });
+        res.redirect('/admin/user');
+}

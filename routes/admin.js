@@ -26,7 +26,7 @@ router.post('/format/create', formatController.save);
 // Genre section
 router.get('/genre', genreController.list);
 
-router.get('/genre/create',genreController.create);
+router.get('/genre/create', genreController.create);
 
 // User section
 router.get('/user', userController.list);
@@ -38,5 +38,7 @@ router.post('/user/create', userController.save);
 router.get('/user/update/:id', userController.update);
 
 router.post('/user/update/:id', userController.save);
+
+router.get('/user/delete/:id', usercontroller.delete);
 
 module.exports = router;
