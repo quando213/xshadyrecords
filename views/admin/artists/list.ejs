@@ -2,6 +2,14 @@
 <html lang="en">
 <head>
     <%- include('../head'); -%>
+    <style>
+        .artist-thumbnail {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -34,9 +42,10 @@
                                         <th>ID</th>
                                         <th>Name</th>
                                         <th>Thumbnail</th>
-                                        <th>Dob</th>
+                                        <th>Date of Birth</th>
                                         <th>Home town</th>
                                         <th>Bio</th>
+                                        <th>Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -44,10 +53,10 @@
                                         <tr>
                                             <td><a href="#"><%= artist[i].id %></a></td>
                                             <td><%= artist[i].name %></td>
-                                            <td><%= artist[i].thumbnail %></td>
+                                            <td><img class="artist-thumbnail" src="<%= artist[i].thumbnail %>"></td>
                                             <td><%= artist[i].dob %></td>
                                             <td><%= artist[i].hometown %></td>
-                                            <td><%= artist[i].bio %></td>
+                                            <td><%= artist[i].bio || 'null' %></td>
                                             <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
                                         </tr>
                                     <% } %>
