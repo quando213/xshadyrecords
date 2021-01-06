@@ -8,4 +8,14 @@ router.get('/', controller.getDashboard);
 
 router.get('/user', controller.list);
 
+router.get('/user/update/:id', controller.update);
+
+router.post('/user/update/:id', controller.save);
+
+router.post('/user/create',controller.save);
+
+router.get('/user/create',controller.create);
+
+
+
 module.exports = router;
