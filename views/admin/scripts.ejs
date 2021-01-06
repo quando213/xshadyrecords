@@ -2,3 +2,12 @@
 <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
 <script src="/javascripts/ruang-admin.min.js"></script>
+<script>
+    $(document).ready(function () {
+        const path = $(location).attr('pathname');
+        $(`.collapse-item[href="${path}"]`)
+            .addClass('active')
+            .parent().parent().addClass('show')
+            .parent().addClass('active');
+    });
+</script>
