@@ -1,4 +1,4 @@
-const { Sequelize, DataTypes } = require('sequelize');
+const {Sequelize, DataTypes} = require('sequelize');
 Sequelize.DATE.prototype._stringify = function _stringify(date, options) {
     return this._applyTimezone(date, options).format('YYYY-MM-DD HH:mm:ss.SSS');
 };
@@ -8,6 +8,8 @@ const sequelize = new Sequelize('xshadyrecords', config.username, config.passwor
     dialect: 'mssql',
     timezone: '+07:00'
 });
+
+const moment = require('moment');
 
 const Role = require('../models/role');
 
@@ -29,6 +31,15 @@ const User = sequelize.define('user', {
         type: DataTypes.STRING(50),
         allowNull: false
     },
+    dob: {
+        type: DataTypes.DATE, get: function () {
+            if (moment(this.getDataValue('dob')).isValid()) {
+                return moment.utc(this.getDataValue('dob')).format('YYYY-MM-DD');
+            } else {
+                return null;
+            }
+        }
+    },
     fullName: {
         type: DataTypes.VIRTUAL,
         get() {
@@ -46,8 +57,7 @@ const User = sequelize.define('user', {
         type: DataTypes.STRING(15),
         allowNull: false
     }
-}, {
-});
+}, {});
 User.belongsTo(Role);
 Role.hasMany(User);
 

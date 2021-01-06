@@ -47,7 +47,7 @@
                         <td><%= users[i].email %></td>
                         <td><%= users[i].phone %></td>
                         <td><%= users[i].roleId %></td>
-                        <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                        <td><a href="/admin/user/update/<%= users[i].id %>" class="btn btn-sm btn-primary">Update</a></td>
                       </tr>
                     <% } %>
                     </tbody>
