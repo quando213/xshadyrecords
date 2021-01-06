@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../head'); -%>
+    <link href="/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+<div id="wrapper">
+    <%- include('../sidebar'); -%>
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <%- include('../topbar'); -%>
+            <div class="container-fluid" id="container-wrapper">
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800"><%= title %></h1>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="..">Home</a></li>
+                        <li class="breadcrumb-item">Users</li>
+                        <li class="breadcrumb-item active" aria-current="page"><%= title %></li>
+                    </ol>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="card mb-4">
+                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                <h6 class="m-0 font-weight-bold text-primary"><%= title %></h6>
+                            </div>
+                            <div class="card-body">
+                                <form method="post" autocomplete="off">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="exampleInputFirstName">First Name </label>
+                                            <input type="text" class="form-control" value="<%= user.firstName %>"
+                                                   name="firstName">
+                                        </div>
+                                        <div class="col">
+                                            <label for="exampleInputLastName">Last Name </label>
+                                            <input type="text" class="form-control" value="<%= user.lastName %>"
+                                                   name="lastName">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email </label>
+                                        <input type="email" class="form-control" value="<%= user.email %>" name="email"
+                                               aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" name="password"
+                                               id="exampleInputPassword1">
+                                    </div>
+                                    <div class="form-group" id="simple-date1">
+                                        <label for="simpleDataInput">Date of Birth</label>
+                                        <div class="input-group date">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="YYYY-MM-DD"
+                                                   value="<%= user.dob %>" id="simpleDataInput" name="dob">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <lable> Phone</lable>
+                                        <input type="text" value="<%= user.phone %>" class="form-control" name="phone">
+                                    </div>
+                                    <div class="form-group">
+                                        <lable>Address</lable>
+                                        <input type="text" class="form-control" value="<%= user.address %>"
+                                               name="address">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sel1">Role</label>
+                                        <select class="form-control" value="<%= user.role %>" id="sel1" name="role">
+                                            <option value="1">User</option>
+                                            <option value="2">Admin</option>
+                                            <option value="3">Super Admin</option>
+                                        </select>
+                                    </div>
+                                    <button class="btn btn-primary btn-block" type="submit">Submit</button>
+                                    <div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabelLogout"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to logout?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel
+                                </button>
+                                <a href="login.html" class="btn btn-primary">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../sign-out-modal'); -%>
+    </div>
+</div>
+<%- include('../footer'); -%>
+</div>
+</div>
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+<%- include('../scripts'); -%>
+<script src="/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script>
+    $('#simple-date1 .input-group.date').datepicker({
+        format: 'dd-mm-yyyy',
+        todayBtn: 'linked',
+        todayHighlight: true,
+        autoclose: true,
+    });
+</script>
+</body>
+</html>
