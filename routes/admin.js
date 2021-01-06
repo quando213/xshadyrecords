@@ -16,6 +16,14 @@ router.post('/user/create',controller.save);
 
 router.get('/user/create',controller.create);
 
+router.get('/user/create',controller.create);
+
+router.get('/user/delete/:id',controller.delete);
+
+
+
+
+
 
 
 module.exports = router;

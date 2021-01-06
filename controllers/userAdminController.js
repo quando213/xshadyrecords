@@ -18,7 +18,7 @@ exports.update = async function (req, res) {
         }
     });
     res.render('admin/users/form', {
-        title:'Update User',
+        title: 'Update User',
         user: oneUser
 
     });
@@ -26,7 +26,7 @@ exports.update = async function (req, res) {
 
 exports.create = function (req, res) {
     res.render('admin/users/form', {
-        title:'Create User',
+        title: 'Create User',
         user: {}
     });
 }
@@ -42,6 +42,7 @@ exports.save = async function (req, res) {
         address: req.body.address,
         role: req.body.role
     };
+
     console.log(dataUser);
     console.log('req.params.id: ' + req.params.id);
     if (req.params.id) {
@@ -57,3 +58,13 @@ exports.save = async function (req, res) {
         res.send(newUser);
     }
 };
+
+
+exports.delete = async function (req, res) {
+        await User.destroy( {
+            where: {
+                id: req.params.id
+            }
+        });
+        res.redirect('/admin/user');
+}
