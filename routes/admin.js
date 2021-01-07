@@ -39,6 +39,6 @@ router.get('/user/update/:id', userController.update);
 
 router.post('/user/update/:id', userController.save);
 
-router.get('/user/delete/:id', usercontroller.delete);
+router.get('/user/delete/:id', userController.delete);
 
 module.exports = router;
