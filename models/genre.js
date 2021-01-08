@@ -17,5 +17,7 @@ const Genre = sequelize.define('genre', {
     description: DataTypes.TEXT
 });
 
+
+
 module.exports = Genre;
 
