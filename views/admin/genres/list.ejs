@@ -34,7 +34,8 @@
                                         <th>ID</th>
                                         <th>Name</th>
                                         <th>Description</th>
-                                        <th>Action</th>
+                                        <th>Delete</th>
+                                        <th>Update</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -47,7 +48,8 @@
                                             <% } else { %>
                                                     <%= genres[i].description %>
                                             <% } %></td>
-                                            <td><a href="#" class="btn btn-sm btn-primary">Detail</a></td>
+                                            <td><a href="/admin/genre/update/<%= genres[i].id %>" class="btn btn-sm btn-primary">Update</a></td>
+                                            <td><a href="/admin/genre/delete/<%= genres[i].id %>" class="btn btn-sm btn-danger">Delete</a></td>
                                         </tr>
                                     <% } %>
                                     </tbody>
