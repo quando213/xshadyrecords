@@ -10,10 +10,13 @@ const sequelize = new Sequelize('xshadyrecords', config.username, config.passwor
 });
 
 
-const Format = sequelize.define ('format',{
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-});
-module.exports = Format;
+
+const ProductArtist = sequelize.define('productArtist', {
+    priority:{
+        type:DataTypes.INTEGER,
+        allowNull: false
+    }
+}, {});
+
+
+module.exports = ProductArtist;

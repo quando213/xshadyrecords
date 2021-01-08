@@ -45,8 +45,8 @@ exports.save = async function (req, res) {
         });
         res.redirect('/admin/user');
     } else {
-        const newUser = await User.create(dataUser);
-        res.send(newUser);
+        await User.create(dataUser);
+        res.redirect('/admin/user');
     }
 };
 

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../head'); -%>
+    <link href="/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <link href="/vendor/select2/dist/css/select2.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="page-top">
+<div id="wrapper">
+    <%- include('../sidebar'); -%>
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
+            <%- include('../topbar'); -%>
+            <div class="container-fluid" id="container-wrapper">
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                    <h1 class="h3 mb-0 text-gray-800"><%= title %></h1>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="..">Home</a></li>
+                        <li class="breadcrumb-item">Users</li>
+                        <li class="breadcrumb-item active" aria-current="page"><%= title %></li>
+                    </ol>
+                </div>
+                <form method="post">
+                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary"><%= title %></h6>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <label for="exampleInputFirstName">Product Name </label>
+                                            <input type="text" class="form-control" name="name" value="<%= product.name %>">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="select2Multiple">Artists</label>
+                                        <select class="select2-multiple form-control"  name="artistId" multiple="multiple"
+                                                id="select2Multiple">
+                                            <% for (var j = 0; j < product.artists.length; j++) { %>
+                                                <option value="<%= product.artists[j].id %>" selected><%= product.artists[j].name %></option>
+                                                <% } %>
+                                            <% for (var i = 0; i < artists.length; i++) { %>
+                                                <% if(!product.artists.map(a => a.id).includes(artists[i].id)){ %>
+                                                        <option value="<%= artists[i].id %>"><%= artists[i].name %></option>  <% } %>
+                                            <% } %>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Price</label>
+                                        <input type="number" class="form-control" name="price" value="<%= product.price %>">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Discount (%)</label>
+                                        <input type="number" class="form-control" value="<%= product.discount %>" name="discount" min="0" max="100">
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Stock Quantity</label>
+                                        <input type="number" class="form-control" name="stockQuantity" value="<%= product.stockQuantity %>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <label for="sel1">Format</label>
+                                        <select class="form-control" id="sel1" name="formatId">
+                                            <% for (var i = 0; i < formats.length; i++) { %>
+                                                <option value="<%= formats[i].id %>" <% if (product.formatId === formats[i].id){ %> <%='selected'%> <% } %>><%= formats[i].name %></option>
+                                            <% } %>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sel1">Genre</label>
+                                        <select class="form-control" id="sel1" name="genreId">
+                                            <% for (var i = 0; i < genres.length; i++) { %>
+                                                <option value="<%= genres[i].id %>" <% if (product.genreId === genres[i].id){ %> <%='selected'%> <% } %> > <%= genres[i].name %></option>
+                                            <% } %>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" value="1" <% if (product.isLimited === true){ %> <%='checked'%> <% } %> id="customCheck2" name="isLimited">
+                                            <label class="custom-control-label" for="customCheck2">Is Limited</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" value="1" <% if (product.isAutographed === true){ %> <%='checked'%> <% } %> id="customCheck3" name="isAutographed">
+                                            <label class="custom-control-label" for="customCheck3">Is Autographed</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" id="simple-date1">
+                                        <label>Released At</label>
+                                        <div class="input-group date">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control" placeholder="YYYY-MM-DD" id="simpleDataInput" name="releasedAt" value="<%= product.releasedAt %>">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary btn-block" type="submit">Submit</button>
+                    </div>
+                </form>
+                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabelLogout"
+                     aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Are you sure you want to logout?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel
+                                </button>
+                                <a href="login.html" class="btn btn-primary">Logout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <%- include('../sign-out-modal'); -%>
+    </div>
+</div>
+<%- include('../footer'); -%>
+</div>
+</div>
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+<%- include('../scripts'); -%>
+<script src="/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+<script src="/vendor/select2/dist/js/select2.min.js"></script>
+<script>
+    $('#simple-date1 .input-group.date').datepicker({
+        format: 'yyyy-mm-dd',
+        todayBtn: 'linked',
+        todayHighlight: true,
+        autoclose: true,
+    });
+    $('.select2-multiple').select2({
+        tags: true,
+        createTag: function (params) {
+            var term = $.trim(params.term);
+            if (term === '') {
+                return null;
+            }
+            return {
+                id: 'NewArtist: ' + term,
+                text: term,
+                newTag: true
+            }
+        }
+    });
+    $('.select2-multiple').on('select2:select', function (e) {
+        var id = e.params.data.id;
+        if (!e.params.data.newTag) {
+            var option = $(e.target).children('[value=' + id + ']');
+            option.detach();
+            $(e.target).append(option).change();
+        }
+    });
+</script>
+</body>
+</html>
