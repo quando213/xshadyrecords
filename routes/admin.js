@@ -48,6 +48,14 @@ router.get('/genre', genreController.list);
 
 router.get('/genre/create', genreController.create);
 
+router.post('/genre/create', genreController.save);
+
+router.get('/genre/update/:id', genreController.update);
+
+router.post('/genre/update/:id', genreController.save);
+
+router.get('/genre/delete/:id', genreController.delete);
+
 // User section
 router.get('/user',userController.list);
 
