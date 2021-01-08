@@ -21,7 +21,13 @@ router.get('/format', formatController.list)
 
 router.get('/format/create', formatController.create);
 
-router.post('/format/create', formatController.save);
+router.post('/format/create', formatController.save)
+
+router.get('/format/update/:id', formatController.update);
+
+router.post('/format/update/:id', formatController.save);
+
+router.get('/format/delete/:id', formatController.delete);
 
 // Genre section
 router.get('/genre', genreController.list);
