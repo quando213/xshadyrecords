@@ -20,12 +20,28 @@ router.get('/', function (req, res) {
 // Artist section
 router.get('/artist', artistController.list);
 
+router.get('/artist/create', artistController.create);
+
+router.post('/artist/create', artistController.save);
+
+router.get('/artist/update/:id', artistController.update);
+
+router.post('/artist/update/:id', artistController.save);
+
+router.get('/artist/delete/:id', artistController.delete);
+
 // Format section
 router.get('/format', formatController.list)
 
 router.get('/format/create', formatController.create);
 
-router.post('/format/create', formatController.save);
+router.post('/format/create', formatController.save)
+
+router.get('/format/update/:id', formatController.update);
+
+router.post('/format/update/:id', formatController.save);
+
+router.get('/format/delete/:id', formatController.delete);
 
 // Genre section
 router.get('/genre', genreController.list);
@@ -58,6 +74,6 @@ router.get('/product/delete/:id',productController.delete)
 
 router.post('/product/create',productController.save)
 
-
+router.get('/user/delete/:id', userController.delete);
 
 module.exports = router;

@@ -15,11 +15,11 @@
             <!-- Container Fluid-->
             <div class="container-fluid" id="container-wrapper">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">User List</h1>
+                    <h1 class="h3 mb-0 text-gray-800"><%= title %></h1>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="..">Home</a></li>
-                        <li class="breadcrumb-item">Users</li>
-                        <li class="breadcrumb-item active" aria-current="page">User List</li>
+                        <li class="breadcrumb-item">Formats</li>
+                        <li class="breadcrumb-item active" aria-current="page"><%= title %></li>
                     </ol>
                 </div>
                 <div class="card mb-4">
@@ -30,7 +30,7 @@
                         <form method="post">
                             <div class="form-group">
                                 <label>Format</label>
-                                <input type="text" class="form-control" name="format" id="exampleInputEmail1">
+                                <input type="text" class="form-control" name="format" value="<%= format.name %>" id="exampleInputEmail1">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
@@ -49,5 +49,14 @@
     <i class="fas fa-angle-up"></i>
 </a>
 <%- include('../scripts'); -%>
+<!--<script src="/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>-->
+<!--<script>-->
+<!--    $('#simple-date1 .input-group.date').datepicker({-->
+<!--        format: 'dd-mm-yyyy',-->
+<!--        todayBtn: 'linked',-->
+<!--        todayHighlight: true,-->
+<!--        autoclose: true,-->
+<!--    });-->
+<!--</script>-->
 </body>
 </html>
