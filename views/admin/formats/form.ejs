@@ -3,16 +3,12 @@
 <head>
     <%- include('../head'); -%>
 </head>
-
 <body id="page-top">
 <div id="wrapper">
     <%- include('../sidebar'); -%>
     <div id="content-wrapper" class="d-flex flex-column">
         <div id="content">
-            <!-- TopBar -->
             <%- include('../topbar'); -%>
-            <!-- Topbar -->
-            <!-- Container Fluid-->
             <div class="container-fluid" id="container-wrapper">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800"><%= title %></h1>
@@ -30,33 +26,21 @@
                         <form method="post">
                             <div class="form-group">
                                 <label>Format</label>
-                                <input type="text" class="form-control" name="format" value="<%= format.name %>" id="exampleInputEmail1">
+                                <input type="text" class="form-control" name="format" value="<%= format.name %>">
                             </div>
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </form>
                     </div>
                 </div>
-                <!--Row-->
                 <%- include('../sign-out-modal'); -%>
             </div>
-            <!---Container Fluid-->
         </div>
         <%- include('../footer'); -%>
     </div>
 </div>
-<!-- Scroll to top -->
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
 </a>
 <%- include('../scripts'); -%>
-<!--<script src="/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>-->
-<!--<script>-->
-<!--    $('#simple-date1 .input-group.date').datepicker({-->
-<!--        format: 'dd-mm-yyyy',-->
-<!--        todayBtn: 'linked',-->
-<!--        todayHighlight: true,-->
-<!--        autoclose: true,-->
-<!--    });-->
-<!--</script>-->
 </body>
 </html>

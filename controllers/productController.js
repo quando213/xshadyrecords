@@ -1,68 +1,10 @@
 const Product = require("../models/product");
-
 const Genre = require("../models/genre");
-
 const Format = require("../models/format");
-
 const Artist = require("../models/artist");
-
-
-exports.create = async function (req, res) {
-    const allGenre = await Genre.findAll({
-        attributes: ['id', 'name']
-    });
-    const allFormat = await Format.findAll({
-        attributes: ['id', 'name']
-    });
-    const allArtist = await Artist.findAll({
-        attributes: ['id', 'name']
-    });
-    res.render('admin/product/form', {
-        title: 'Create Product',
-        genres: allGenre,
-        formats: allFormat,
-        artists: allArtist,
-        product: {artists: []}
-    })
-};
-
-exports.update = async function (req, res) {
-    const oneProduct = await Product.findOne({
-        include: {
-            model: Artist,
-            attributes: ['id', 'name'],
-            through: {
-                attributes: []
-            }
-        },
-
-        where: {
-            id: req.params.id
-        },
-    });
-    const allGenre = await Genre.findAll({
-        attributes: ['id', 'name']
-    });
-    const allFormat = await Format.findAll({
-        attributes: ['id', 'name']
-    });
-    const allArtist = await Artist.findAll({
-        attributes: ['id', 'name']
-    });
-    console.log('oneProduct: ' + JSON.stringify(oneProduct, null, 2))
-    res.render('admin/product/form', {
-        title: 'Update Product',
-        genres: allGenre,
-        formats: allFormat,
-        artists: allArtist,
-        product: oneProduct
-    })
-};
-
 
 exports.list = async function (req, res) {
     const allProducts = await Product.findAll({
-            // attributes: ['id', 'name', '....']
             include: [{
                 model: Genre,
                 attributes: ['name']
@@ -78,23 +20,61 @@ exports.list = async function (req, res) {
     allProducts.forEach(item => {
         item.artistName = item.artists.map(a => a.name).join(', ');
     })
-    console.log(JSON.stringify(allProducts, null, 2));
-    res.render('admin/product/list', {
+    res.render('admin/products/list', {
         products: allProducts,
         title: 'Product List'
     });
 }
 
-exports.delete = async function (req, res) {
+exports.create = async function (req, res) {
+    const allGenres = await Genre.findAll({
+        attributes: ['id', 'name']
+    });
+    const allFormats = await Format.findAll({
+        attributes: ['id', 'name']
+    });
+    const allArtists = await Artist.findAll({
+        attributes: ['id', 'name']
+    });
+    res.render('admin/products/form', {
+        title: 'Create New Product',
+        genres: allGenres,
+        formats: allFormats,
+        artists: allArtists,
+        product: {artists: []}
+    })
+};
 
-    // setArtist([])
-    await Product.destroy({
+exports.update = async function (req, res) {
+    const oneProduct = await Product.findOne({
+        include: {
+            model: Artist,
+            attributes: ['id', 'name'],
+            through: {
+                attributes: []
+            }
+        },
         where: {
             id: req.params.id
-        }
+        },
     });
-    res.redirect('/admin/product');
-}
+    const allGenres = await Genre.findAll({
+        attributes: ['id', 'name']
+    });
+    const allFormats = await Format.findAll({
+        attributes: ['id', 'name']
+    });
+    const allArtists = await Artist.findAll({
+        attributes: ['id', 'name']
+    });
+    res.render('admin/products/form', {
+        title: 'Update Product',
+        genres: allGenres,
+        formats: allFormats,
+        artists: allArtists,
+        product: oneProduct
+    })
+};
 
 exports.save = async function (req, res) {
     const dataProduct = {
@@ -108,24 +88,23 @@ exports.save = async function (req, res) {
         isLimited: req.body.isLimited,
         releasedAt: req.body.releasedAt,
     };
-    let updateProduct, newProduct;
-    if (req.params.id){
-        await Product.update(dataProduct,{
+    let currentProduct;
+    if (req.params.id) {
+        await Product.update(dataProduct, {
             where: {
                 id: req.params.id
             }
         });
-        updateProduct = await Product.findOne({
-            where:{
+        currentProduct = await Product.findOne({
+            where: {
                 id: req.params.id
             }
         })
     } else {
-        newProduct = await Product.create(dataProduct);
+        currentProduct = await Product.create(dataProduct);
     }
-    let currentProduct = updateProduct || newProduct;
-    console.log('currentProduct: ' + JSON.stringify(currentProduct, null, 2));
     let artistIdList = req.body.artistId;
+    await currentProduct.setArtists([]);
     if (artistIdList) {
         if (!Array.isArray(artistIdList)) {
             artistIdList = [artistIdList];
@@ -140,5 +119,14 @@ exports.save = async function (req, res) {
             await currentProduct.addArtist(artistIdList[i], {through: {priority: i}});
         }
     }
+    res.redirect('/admin/product');
+};
+
+exports.delete = async function (req, res) {
+    await Product.destroy({
+        where: {
+            id: req.params.id
+        }
+    });
     res.redirect('/admin/product');
 };

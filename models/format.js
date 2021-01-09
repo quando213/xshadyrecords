@@ -9,11 +9,11 @@ const sequelize = new Sequelize('xshadyrecords', config.username, config.passwor
     timezone: '+07:00'
 });
 
-
 const Format = sequelize.define ('format',{
     name: {
         type: DataTypes.STRING,
-        allowNull: false,
-    },
+        allowNull: false
+    }
 });
+
 module.exports = Format;

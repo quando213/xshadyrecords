@@ -4,9 +4,7 @@
     <%- include('../head'); -%>
     <link href="/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
 </head>
-
 <body id="page-top">
-
 <div id="wrapper">
     <%- include('../sidebar'); -%>
     <div id="content-wrapper" class="d-flex flex-column">
@@ -32,24 +30,22 @@
                                 <form method="post" autocomplete="off">
                                     <div class="row">
                                         <div class="col">
-                                            <label for="exampleInputLastName">Name </label>
-                                            <input type="text" class="form-control" value="<%= artist.name %>"
-                                                   name="name">
+                                            <label>Name </label>
+                                            <input type="text" class="form-control" value="<%= artist.name %>" name="name">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Thumbnail </label>
-                                        <input type="text" class="form-control" value="<%= artist.thumbnail %>" name="thumbnail"
-                                               aria-describedby="emailHelp">
+                                        <input type="text" class="form-control" value="<%= artist.thumbnail %>" name="thumbnail">
                                     </div>
                                     <div class="form-group" id="simple-date1">
-                                        <label for="simpleDataInput">Date of Birth</label>
+                                        <label>Date of Birth</label>
                                         <div class="input-group date">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="fas fa-calendar"></i></span>
                                             </div>
                                             <input type="text" class="form-control" placeholder="YYYY-MM-DD"
-                                                   value="<%= artist.dob %>" id="simpleDataInput" name="dob">
+                                                   value="<%= artist.dob %>" name="dob">
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -68,35 +64,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
-                     aria-labelledby="exampleModalLabelLogout"
-                     aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabelLogout">Ohh No!</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Are you sure you want to logout?</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel
-                                </button>
-                                <a href="login.html" class="btn btn-primary">Logout</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <%- include('../sign-out-modal'); -%>
             </div>
         </div>
-        <%- include('../sign-out-modal'); -%>
+        <%- include('../footer'); -%>
     </div>
-</div>
-<%- include('../footer'); -%>
-</div>
 </div>
 <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>

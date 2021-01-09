@@ -3,53 +3,46 @@
 <head>
     <%- include('../head'); -%>
 </head>
-
 <body id="page-top">
 <div id="wrapper">
     <%- include('../sidebar'); -%>
     <div id="content-wrapper" class="d-flex flex-column">
         <div id="content">
-            <!-- TopBar -->
             <%- include('../topbar'); -%>
-            <!-- Topbar -->
-            <!-- Container Fluid-->
             <div class="container-fluid" id="container-wrapper">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800"></h1>
+                    <h1 class="h3 mb-0 text-gray-800"><%= title %></h1>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item">Genres</li>
                         <li class="breadcrumb-item active" aria-current="page"><%= title %></li>
                     </ol>
                 </div>
-             <div class="card mb-4">
-                 <div class="card-body">
-                     <form method="post">
-                         <div class="form-group">
-                             <label>Genre</label>
-                             <input type="text" value="<%= genres.name %>" class="form-control" name="genres">
-                         </div>
-                         <div class="form-group mt-4">
-                             <label for="exampleFormControlTextarea1">Description</label>
-                             <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="14"><%= genres.description %></textarea>
-                         </div>
-                         <button type="submit" class="btn-block btn-primary">Submit</button>
-                     </form>
-                 </div>
-             </div>
-                    <!--Row-->
-                    <%- include('../sign-out-modal'); -%>
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <form method="post">
+                            <div class="form-group">
+                                <label>Genre</label>
+                                <input type="text" value="<%= genre.name %>" class="form-control" name="genre">
+                            </div>
+                            <div class="form-group mt-4">
+                                <label for="exampleFormControlTextarea1">Description</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" name="description"
+                                          rows="14"><%= genre.description %></textarea>
+                            </div>
+                            <button type="submit" class="btn-block btn-primary">Submit</button>
+                        </form>
+                    </div>
                 </div>
-                <!---Container Fluid-->
+                <%- include('../sign-out-modal'); -%>
             </div>
-            <%- include('../footer'); -%>
         </div>
+        <%- include('../footer'); -%>
     </div>
-    <!-- Scroll to top -->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-    <%- include('../scripts'); -%>
-
+</div>
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+<%- include('../scripts'); -%>
 </body>
 </html>

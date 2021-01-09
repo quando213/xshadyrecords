@@ -9,14 +9,14 @@ const sequelize = new Sequelize('xshadyrecords', config.username, config.passwor
     timezone: '+07:00'
 });
 
-
-
 const ProductArtist = sequelize.define('productArtist', {
     priority:{
         type:DataTypes.INTEGER,
         allowNull: false
     }
-}, {});
+}, {
+    timestamps: false
+});
 
 
 module.exports = ProductArtist;
