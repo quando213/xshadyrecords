@@ -3,7 +3,15 @@ const User = require("../models/user");
 exports.list = async function (req, res) {
     const allUsers = await User.findAll();
     res.render('admin/users/list', {
-        users: allUsers
+        users: allUsers,
+        title: 'User List'
+    });
+}
+
+exports.create = function (req, res) {
+    res.render('admin/users/form', {
+        title: 'Create New User',
+        user: {}
     });
 }
 
@@ -16,13 +24,6 @@ exports.update = async function (req, res) {
     res.render('admin/users/form', {
         title: 'Update User',
         user: oneUser
-    });
-}
-
-exports.create = function (req, res) {
-    res.render('admin/users/form', {
-        title: 'Create New User',
-        user: {}
     });
 }
 

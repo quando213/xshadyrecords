@@ -3,21 +3,22 @@ const Genre = require("../models/genre");
 exports.list = async function (req, res) {
     const allGenres = await Genre.findAll();
     res.render('admin/genres/list', {
-        genres: allGenres
+        genres: allGenres,
+        title: 'Genre List'
     });
 }
 
 exports.create = async function (req, res) {
-    const allGenres = await Genre.findAll();
     res.render('admin/genres/form', {
-        create: allGenres
+        title: 'Create New Genre',
+        genre: {}
     });
 }
 
 exports.update = async function (req, res) {
     const oneGenre = await Genre.findOne({
         where: {
-            id:req.params.id
+            id: req.params.id
         }
     });
     res.render('admin/genres/form', {
@@ -27,19 +28,19 @@ exports.update = async function (req, res) {
 }
 
 exports.save = async function (req, res) {
-    const dataGener = {
-       name: req.body.genres,
+    const dataGenre = {
+        name: req.body.genre,
         description: req.body.description
     };
     if (req.params.id) {
-        await Genre.update(dataGener, {
+        await Genre.update(dataGenre, {
             where: {
                 id: req.params.id
             }
         });
         res.redirect('/admin/genre');
     } else {
-        await Genre.create(dataGener);
+        await Genre.create(dataGenre);
         res.redirect('/admin/genre');
     }
 };

@@ -3,10 +3,17 @@ const Artist = require("../models/artist");
 exports.list = async function (req, res) {
     const allArtists = await Artist.findAll();
     res.render('admin/artists/list', {
-        artist: allArtists
+        artist: allArtists,
+        title: 'Artist List'
     });
 }
 
+exports.create = function (req, res) {
+    res.render('admin/artists/form', {
+        title: 'Create New Artist',
+        artist: {}
+    });
+}
 
 exports.update = async function (req, res) {
     const oneArtist = await Artist.findOne({
@@ -15,15 +22,8 @@ exports.update = async function (req, res) {
         }
     });
     res.render('admin/artists/form', {
-        title: 'Update artists',
+        title: 'Update Artist',
         artist: oneArtist
-    });
-}
-
-exports.create = function (req, res) {
-    res.render('admin/artists/form', {
-        title: 'Create Artist',
-        artist: {}
     });
 }
 
@@ -35,7 +35,6 @@ exports.save = async function (req, res) {
         hometown: req.body.hometown,
         bio: req.body.bio,
     }
-    // res.redirect('/admin/artist');
     if (req.params.id) {
         await Artist.update(artistData, {
             where: {
@@ -47,13 +46,10 @@ exports.save = async function (req, res) {
         const newArtist = await Artist.create(artistData);
         res.redirect('/admin/artist');
     }
-
 }
 
-
-
 exports.delete = async function (req, res) {
-    await Artist.destroy( {
+    await Artist.destroy({
         where: {
             id: req.params.id
         }
