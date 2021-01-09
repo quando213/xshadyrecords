@@ -4,12 +4,12 @@ const router = express.Router();
 router.use(express.urlencoded({ extended: false }));
 const controller = require('../controllers/userController');
 
-router.get('/sign-in', controller.getSignInForm);
+router.get('/sign-in', controller.signIn);
 
-router.post('/sign-in', controller.submitSignInForm);
+router.post('/sign-in', controller.processSignIn);
 
-router.get('/sign-up', controller.getSignUpForm);
+router.get('/sign-up', controller.signUp);
 
-router.post('/sign-up', controller.submitSignUpForm);
+router.post('/sign-up', controller.store);
 
 module.exports = router;

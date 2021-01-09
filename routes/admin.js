@@ -7,7 +7,7 @@ const productController = require("../controllers/productController");
 const artistController = require("../controllers/artistController");
 const formatController = require('../controllers/formatController');
 const genreController = require('../controllers/genreController');
-const userController = require('../controllers/userAdminController');
+const userController = require('../controllers/userController');
 
 // Dashboard
 router.get('/', function (req, res) {
@@ -73,7 +73,7 @@ router.get('/user', userController.list);
 
 router.get('/user/create', userController.create);
 
-router.post('/user/create', userController.save);
+router.post('/user/create', userController.validate('save'), userController.save);
 
 router.get('/user/update/:id', userController.update);
 
