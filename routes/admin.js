@@ -16,6 +16,16 @@ router.get('/', function (req, res) {
 // Artist section
 router.get('/artist', artistController.list);
 
+router.get('/artist/create', artistController.create);
+
+router.post('/artist/create', artistController.save);
+
+router.get('/artist/update/:id', artistController.update);
+
+router.post('/artist/update/:id', artistController.save);
+
+router.get('/artist/delete/:id', artistController.delete);
+
 // Format section
 router.get('/format', formatController.list)
 
