@@ -39,7 +39,7 @@
                                     </thead>
                                     <tbody>
                                     <% for (var i = 0; i < products.length; i++) { %>
-                                        <div class="modal fade" id="DeleteProduct" tabindex="-1" role="dialog" aria-labelledby="deleteProduct"
+                                        <div class="modal fade" id="DeleteProduct<%= products[i].id %>" tabindex="-1" role="dialog" aria-labelledby="deleteProduct"
                                              aria-hidden="true">
                                             <div class="modal-dialog" role="document">
                                                 <div class="modal-content">
@@ -79,7 +79,7 @@
                                             </td>
                                             <td>
                                                 <a href="/admin/product/update/<%= products[i].id %>" class="btn-block btn-sm btn-primary">Update</a>
-                                                <a class="btn-block btn-sm btn-danger" href="javascript:void(0);" data-toggle="modal" data-target="#DeleteProduct">Delete</a>
+                                                <a class="btn-block btn-sm btn-danger" href="javascript:void(0);" data-toggle="modal" data-target="#DeleteProduct<%= products[i].id %>">Delete</a>
                                             </td>
                                         </tr>
                                     <% } %>

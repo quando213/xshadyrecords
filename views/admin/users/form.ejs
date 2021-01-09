@@ -20,26 +20,11 @@
                         <li class="breadcrumb-item active" aria-current="page"><%= title %></li>
                     </ol>
                 </div>
-                <div class="row">
-                    <div class="col-6">
-                        <div class="card mb-4">
-                            <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                <h6 class="m-0 font-weight-bold text-primary"><%= title %></h6>
-                            </div>
-                            <div class="card-body">
-                                <form method="post" autocomplete="off">
-                                    <div class="row">
-                                        <div class="col">
-                                            <label for="exampleInputFirstName">First Name </label>
-                                            <input type="text" class="form-control" value="<%= user.firstName %>"
-                                                   name="firstName">
-                                        </div>
-                                        <div class="col">
-                                            <label for="exampleInputLastName">Last Name </label>
-                                            <input type="text" class="form-control" value="<%= user.lastName %>"
-                                                   name="lastName">
-                                        </div>
-                                    </div>
+                <form method="post">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card mb-4">
+                                <div class="card-body">
                                     <div class="form-group">
                                         <label for="exampleInputEmail1">Email </label>
                                         <input type="email" class="form-control" value="<%= user.email %>" name="email"
@@ -49,6 +34,57 @@
                                         <label for="exampleInputPassword1">Password</label>
                                         <input type="password" class="form-control" name="password"
                                                id="exampleInputPassword1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Confirm Password</label>
+                                        <input type="password" class="form-control" name="password"
+                                               id="exampleInputPassword1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="sel1">Role</label>
+                                        <select class="form-control" value="<%= user.role %>" id="sel1" name="role">
+                                            <option value="1">User</option>
+                                            <option value="2">Admin</option>
+                                            <option value="3">Super Admin</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col">
+                                                <label for="exampleInputFirstName">First Name </label>
+                                                <input type="text" class="form-control" value="<%= user.firstName %>"
+                                                       name="firstName">
+                                            </div>
+                                            <div class="col">
+                                                <label for="exampleInputLastName">Last Name </label>
+                                                <input type="text" class="form-control" value="<%= user.lastName %>"
+                                                       name="lastName">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <lable>Gender</lable>
+                                    <div class="form-group">
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="optradio">Male
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="optradio">Female
+                                            </label>
+                                        </div>
+                                        <div class="form-check-inline">
+                                            <label class="form-check-label">
+                                                <input type="radio" class="form-check-input" name="optradio">Other
+                                            </label>
+                                        </div>
                                     </div>
                                     <div class="form-group" id="simple-date1">
                                         <label for="simpleDataInput">Date of Birth</label>
@@ -61,30 +97,26 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <lable> Phone</lable>
-                                        <input type="text" value="<%= user.phone %>" class="form-control" name="phone">
-                                    </div>
-                                    <div class="form-group">
                                         <lable>Address</lable>
                                         <input type="text" class="form-control" value="<%= user.address %>"
                                                name="address">
                                     </div>
                                     <div class="form-group">
-                                        <label for="sel1">Role</label>
-                                        <select class="form-control" value="<%= user.role %>" id="sel1" name="role">
-                                            <option value="1">User</option>
-                                            <option value="2">Admin</option>
-                                            <option value="3">Super Admin</option>
-                                        </select>
+                                        <lable> Phone</lable>
+                                        <input type="text" value="<%= user.phone %>" class="form-control"
+                                               name="phone">
                                     </div>
-                                    <div>
-                                        <button class="btn btn-primary btn-block" type="submit">Submit</button>
-                                    </div>
-                                </form>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                    <div>
+                        <button class="btn btn-primary btn-block" type="submit">Submit</button>
+                        <% if (user.email) {%>
+                            <a href="/admin/user/delete/<%= user.id %>" class="btn btn-block btn-danger">Delete</a>
+                        <%}%>
+                    </div>
+                </form>
                 <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog"
                      aria-labelledby="exampleModalLabelLogout"
                      aria-hidden="true">
