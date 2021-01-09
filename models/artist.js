@@ -1,4 +1,4 @@
-const { Sequelize, DataTypes } = require('sequelize');
+const {Sequelize, DataTypes} = require('sequelize');
 Sequelize.DATE.prototype._stringify = function _stringify(date, options) {
     return this._applyTimezone(date, options).format('YYYY-MM-DD HH:mm:ss.SSS');
 };
@@ -19,7 +19,7 @@ const Artist = sequelize.define('artist', {
     thumbnail: DataTypes.STRING(2083),
     dob: {
         type: DataTypes.DATE,
-        get: function() {
+        get: function () {
             if (moment(this.getDataValue('dob')).isValid()) {
                 return moment.utc(this.getDataValue('dob')).format('YYYY-MM-DD');
             } else {
@@ -27,12 +27,8 @@ const Artist = sequelize.define('artist', {
             }
         }
     },
-    hometown: {
-        type: DataTypes.STRING,
-    },
-    bio: {
-        type: DataTypes.TEXT,
-    }
-}, {
-});
+    hometown: DataTypes.STRING,
+    bio: DataTypes.TEXT,
+}, {});
+
 module.exports = Artist;
