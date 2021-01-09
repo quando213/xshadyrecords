@@ -80,7 +80,8 @@ exports.list = async function (req, res) {
     })
     console.log(JSON.stringify(allProducts, null, 2));
     res.render('admin/product/list', {
-        products: allProducts
+        products: allProducts,
+        title: 'Product List'
     });
 }
 

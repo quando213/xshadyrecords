@@ -15,11 +15,11 @@
             <!-- Container Fluid-->
             <div class="container-fluid" id="container-wrapper">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">User List</h1>
+                    <h1 class="h3 mb-0 text-gray-800"><%= title %></h1>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="..">Home</a></li>
-                        <li class="breadcrumb-item">Users</li>
-                        <li class="breadcrumb-item active" aria-current="page">User List</li>
+                        <li class="breadcrumb-item">Product</li>
+                        <li class="breadcrumb-item active" aria-current="page"><%= title %> </li>
                     </ol>
                 </div>
 
@@ -43,6 +43,20 @@
                                     </thead>
                                     <tbody>
                                     <% for (var i = 0; i < products.length; i++) { %>
+                                        <div class="modal fade" id="DeleteProduct" tabindex="-1" role="dialog" aria-labelledby="deleteProduct"
+                                             aria-hidden="true">
+                                            <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-body">
+                                                        <p>Are you sure you want to delete <b><%= products[i].name %></b> by <%= products[i].artistName %>  </p>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
+                                                        <a href="/admin/product/delete/<%= products[i].id %>" class="btn btn-primary">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <tr>
                                             <td><a href="#"><%= products[i].id %></a></td>
                                             <td><%= products[i].name %></td>
@@ -68,10 +82,9 @@
                                                 <% } %>
                                             </td>
                                             <td>
-                                                <a href="/admin/product/update/<%= products[i].id %>"
-                                                   class="btn-block btn-sm btn-primary">Update</a>
-                                                <a href="/admin/product/delete/<%= products[i].id %>"
-                                                        class="btn-block btn-sm btn-danger">Delete</a></td>
+                                                <a href="/admin/product/update/<%= products[i].id %>" class="btn-block btn-sm btn-primary">Update</a>
+                                                <a class="btn-block btn-sm btn-danger" href="javascript:void(0);" data-toggle="modal" data-target="#DeleteProduct">Delete</a>
+                                            </td>
                                         </tr>
                                     <% } %>
                                     </tbody>

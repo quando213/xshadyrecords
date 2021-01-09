@@ -15,7 +15,7 @@ exports.update = async function (req, res) {
     });
     res.render('admin/users/form', {
         title: 'Update User',
-        user: oneUser
+        user: oneUser,
     });
 }
 

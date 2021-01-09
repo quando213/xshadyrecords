@@ -17,11 +17,16 @@
                     <h1 class="h3 mb-0 text-gray-800"><%= title %></h1>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="..">Home</a></li>
-                        <li class="breadcrumb-item">Users</li>
+                        <li class="breadcrumb-item">Product</li>
                         <li class="breadcrumb-item active" aria-current="page"><%= title %></li>
                     </ol>
                 </div>
-                <form method="post">
+                <form method="post" id="formProduct">
+                    <style>
+                        .errorMsg {
+                            color:red ;
+                        }
+                    </style>
                     <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                         <h6 class="m-0 font-weight-bold text-primary"><%= title %></h6>
                     </div>
@@ -29,11 +34,10 @@
                         <div class="col-6">
                             <div class="card mb-4">
                                 <div class="card-body">
-                                    <div class="row">
-                                        <div class="col">
+                                    <div class="form-group">
+
                                             <label for="exampleInputFirstName">Product Name </label>
                                             <input type="text" class="form-control" name="name" value="<%= product.name %>">
-                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="select2Multiple">Artists</label>
@@ -54,7 +58,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label>Discount (%)</label>
-                                        <input type="number" class="form-control" value="<%= product.discount %>" name="discount" min="0" max="100">
+                                        <input type="number" class="form-control" value="<%= product.discount || 0 %>" name="discount" min="0" max="100">
                                     </div>
                                     <div class="form-group">
                                         <label>Stock Quantity</label>
@@ -145,6 +149,7 @@
 <%- include('../scripts'); -%>
 <script src="/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 <script src="/vendor/select2/dist/js/select2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
 <script>
     $('#simple-date1 .input-group.date').datepicker({
         format: 'yyyy-mm-dd',
@@ -174,6 +179,69 @@
             $(e.target).append(option).change();
         }
     });
+    $(function () {
+        $('#formProduct').validate({
+            rules: {
+                name: {
+                    required: true,
+                    maxlength: 255,
+                },
+                artistId: {
+                    required: true,
+                },
+                price: {
+                    required: true,
+                    min: 0
+                },
+                formatId:{
+                    required: true,
+                },
+                genreId:{
+                    required: true,
+                },
+                releasedAt:{
+                    required: true,
+                },
+                discount:{
+                    digits: true,
+                    max: 100
+                },
+                stockQuantity:{
+                    digits: true,
+                    required: true
+                }
+
+            },
+            messages: {
+                name: {
+                    required: 'Please enter product name',
+                    maxlength: 'Product name is limited to 255 characters',
+                },
+                artistId: {
+                    required: 'Please enter at least one artist'
+                },
+                price: {
+                    required: 'Please enter a price',
+                    min: 'Price cannot be negative'
+                },
+                releasedAt:{
+                    required: 'Please enter a release date'
+                },
+                discount:{
+                    digits: 'Please enter an integer between 0 and 100',
+                    max: 'Discount cannot be greater than 100'
+                },
+                stockQuantity:{
+                    digits: 'Stock quantity must be a non-negative integer',
+                    required: 'Please enter stock quantity'
+                }
+            },
+            errorClass: 'errorMsg',
+            errorPlacement: function(error, element) {
+                error.appendTo(element.parents('.form-group'));
+            }
+        });
+    })
 </script>
 </body>
 </html>
