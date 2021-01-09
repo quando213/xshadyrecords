@@ -15,61 +15,41 @@
             <!-- Container Fluid-->
             <div class="container-fluid" id="container-wrapper">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">Genres List</h1>
+                    <h1 class="h3 mb-0 text-gray-800"></h1>
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="..">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item">Genres</li>
-                        <li class="breadcrumb-item active" aria-current="page">Genres List</li>
+                        <li class="breadcrumb-item active" aria-current="page"><%= title %></li>
                     </ol>
                 </div>
-
-                <div class="card mb-4">
-                    <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                        <h6 class="m-0 font-weight-bold text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Biểu mẫu cơ bản</font></font></h6>
-                    </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Địa chỉ email</font></font></label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nhập email">
-                                <small id="emailHelp" class="form-text text-muted"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chúng tôi sẽ không bao giờ chia sẻ email của bạn với bất kỳ ai khác.</font></font></small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name</font></font></label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nhập Name">
-                                <font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
-                            <div class="form-group">
-                                <label for="exampleInputPassword1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mật khẩu</font></font></label>
-                                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Mật khẩu">
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Textarea mẫu</font></font></label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="customFile">
-                                    <label class="custom-file-label" for="customFile"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chọn tập tin</font></font></label>
-                                </div>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gửi đi</font></font></button>
-
-                        </form>
-                    </div>
+             <div class="card mb-4">
+                 <div class="card-body">
+                     <form method="post">
+                         <div class="form-group">
+                             <label>Genre</label>
+                             <input type="text" value="<%= genres.name %>" class="form-control" name="genres">
+                         </div>
+                         <div class="form-group mt-4">
+                             <label for="exampleFormControlTextarea1">Description</label>
+                             <textarea class="form-control" id="exampleFormControlTextarea1" name="description" rows="14"><%= genres.description %></textarea>
+                         </div>
+                         <button type="submit" class="btn-block btn-primary">Submit</button>
+                     </form>
+                 </div>
+             </div>
+                    <!--Row-->
+                    <%- include('../sign-out-modal'); -%>
                 </div>
-                <!--Row-->
-                <%- include('../sign-out-modal'); -%>
+                <!---Container Fluid-->
             </div>
-            <!---Container Fluid-->
+            <%- include('../footer'); -%>
         </div>
-        <%- include('../footer'); -%>
     </div>
-</div>
-<!-- Scroll to top -->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-<%- include('../scripts'); -%>
+    <!-- Scroll to top -->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <%- include('../scripts'); -%>
+
 </body>
 </html>

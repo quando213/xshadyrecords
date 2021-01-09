@@ -15,11 +15,11 @@
             <!-- Container Fluid-->
             <div class="container-fluid" id="container-wrapper">
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                    <h1 class="h3 mb-0 text-gray-800">User List</h1>
+                    <h1 class="h3 mb-0 text-gray-800">Format List</h1>
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="..">Home</a></li>
-                        <li class="breadcrumb-item">Users</li>
-                        <li class="breadcrumb-item active" aria-current="page">User List</li>
+                        <li class="breadcrumb-item">Formats</li>
+                        <li class="breadcrumb-item active" aria-current="page">Format List</li>
                     </ol>
                 </div>
 
@@ -33,7 +33,8 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Name</th>
-                                        <th>Action</th>
+                                        <th>Update</th>
+                                        <th>Delete</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -41,7 +42,8 @@
                                         <tr>
                                             <td><a href="#"><%= format[i].id %></a></td>
                                             <td><%= format[i].name %></td>
-                                            <td><a href="#" class="btn btn-sm btn-primary">Delist</a></td>
+                                            <td><a href="/admin/format/update/<%= format[i].id %>" class="btn btn-sm btn-primary">Update</a></td>
+                                            <td><a href="/admin/format/delete/<%= format[i].id %>" class="btn btn-sm btn-danger">Delete</a></td>
                                         </tr>
                                     <% } %>
                                     </tbody>
